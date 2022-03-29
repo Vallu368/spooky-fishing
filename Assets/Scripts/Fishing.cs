@@ -18,6 +18,8 @@ public class Fishing : MonoBehaviour
 
     public CameraMovement cameraMovement;
     public GameObject test;
+    public GameObject fish;
+    public FishScript fishScript;
     void Start()
     {
         test.SetActive(false);
@@ -97,7 +99,7 @@ public class Fishing : MonoBehaviour
             }
             if (randomNumber)
             {
-                i = Random.Range(0, 50);  //aluksi kattoo 0 - 50 numeroista
+                i = Random.Range(0, 5);  //aluksi kattoo 0 - 50 numeroista
             }
 
             if (wait >= 40 && randomNumber)
@@ -108,6 +110,7 @@ public class Fishing : MonoBehaviour
             if (i == 1) //random numero on 1 = saat kalan
             {
                 Debug.Log("fish!!");
+                fishScript.SpawnRandomPrefab();
                 gotFish = true;
             }
 
@@ -123,6 +126,7 @@ public class Fishing : MonoBehaviour
         void CatchFish()
         {
             Debug.Log("caught fish!");
+            fish.transform.position = new Vector3(0f, 0.5f, 2f);
             gotFish = false;
             finishedFishing = true;
         }
