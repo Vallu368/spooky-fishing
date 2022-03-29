@@ -29,7 +29,7 @@ public class MonsterTest : MonoBehaviour
         {
             i = 0;
             Instantiate(spooks);
-            Debug.Log("spawned mörkö");
+            Debug.Log("spawned marko");
             canSpawn = false;
         }
 
