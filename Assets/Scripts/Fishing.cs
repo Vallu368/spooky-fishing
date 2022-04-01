@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Fishing : MonoBehaviour
 {
+    public Animator anim;
+
     public bool isFishing = false;
     public bool waitingForFish = false;
     public bool gotFish = false;
     public bool finishedFishing = false;
+
+    public bool caughtFish = false;
 
     public int i = 0;
     public int wait = 0;
@@ -16,13 +20,13 @@ public class Fishing : MonoBehaviour
     private int nextUpdate = 1;
 
 
+
     public CameraMovement cameraMovement;
     public GameObject test;
     public GameObject fish;
     public FishScript fishScript;
     void Start()
     {
-        test.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,16 +40,15 @@ public class Fishing : MonoBehaviour
             UpdateEverySecond();
         }
 
-        if (isFishing == false) //jos ei kalasta tuo laatikko ei näy
-        {
-            test.SetActive(false);
-        }
-
         if (Input.GetKey("space") && cameraMovement.lookDown == true && isFishing == false) //alottaa kalastuksen jos katot alas ja et oo kalastamassa jo
         {
             Debug.Log("started fishing"!);
+            anim.SetBool("startedFishing", true);
+            anim.SetBool("stoppedFishing", false);
+
             isFishing = true;
             waitingForFish = true;
+            
         }
         if (Input.GetKey("space") && gotFish && cameraMovement.lookDown) //ottaa kalan kiinni
         {
@@ -77,6 +80,7 @@ public class Fishing : MonoBehaviour
                 {
                     finishedFishing = false;
                     isFishing = false;
+                    caughtFish = false;
                     wait = 0;
                 }
             }
@@ -89,7 +93,6 @@ public class Fishing : MonoBehaviour
             {
                 wait++;
             }
-            test.SetActive(true); 
 
             bool randomNumber = false; 
             
@@ -109,6 +112,7 @@ public class Fishing : MonoBehaviour
 
             if (i == 1) //random numero on 1 = saat kalan
             {
+                anim.SetBool("caughtFish", true);
                 Debug.Log("fish!!");
                 fishScript.SpawnRandomPrefab();
                 gotFish = true;
@@ -125,13 +129,20 @@ public class Fishing : MonoBehaviour
 
         void CatchFish()
         {
+            anim.SetBool("stoppedFishing", true);
+            anim.SetBool("startedFishing", false);
+            anim.SetBool("caughtFish", false);
             Debug.Log("caught fish!");
-            fish.transform.position = new Vector3(0f, 0.5f, 2f);
+            caughtFish = true;
+            fishScript.SetGameObjectActive();
+           // fish.transform.position = new Vector3(0f, 0.5f, 2f);
             gotFish = false;
             finishedFishing = true;
         }
         void MissedFish()
         {
+            anim.SetBool("stoppedFishing", true);
+            anim.SetBool("startedFishing", false);
             Debug.Log("missed fish!");
             gotFish = false;
             catchFishTimer = 0;
