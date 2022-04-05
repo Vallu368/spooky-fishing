@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class FishScript : MonoBehaviour
 {
-    public GameObject[] fishes;
+//    public GameObject[] fishes;
+    public FishableItem[] fishes;
     public int i = 0;
     public Fishing fishing;
+    public int index = 0;
+    public InventoryManager inventory;
 
 
     private void Update()
     {
         if (fishing.caughtFish)
         {
-            
             gameObject.SetActive(true);
         }
         else gameObject.SetActive(false);
@@ -21,9 +23,8 @@ public class FishScript : MonoBehaviour
     }
     public void SpawnRandomPrefab()
     {
-        int index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
-        var fish = Instantiate(fishes[index], this.transform); // spawnaa kalan
-
+        index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
+        var fish = Instantiate(fishes[index].prefab, this.transform); // spawnaa kalan
         Destroy(fish, 2);
 
 
@@ -35,4 +36,8 @@ public class FishScript : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    public void CaughtFish()
+    {
+        inventory.Add(fishes[index]);
+    }
 }

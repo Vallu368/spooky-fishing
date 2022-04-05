@@ -133,6 +133,7 @@ public class Fishing : MonoBehaviour
             anim.SetBool("startedFishing", false);
             anim.SetBool("caughtFish", false);
             Debug.Log("caught fish!");
+            fishScript.CaughtFish();
             caughtFish = true;
             fishScript.SetGameObjectActive();
            // fish.transform.position = new Vector3(0f, 0.5f, 2f);
