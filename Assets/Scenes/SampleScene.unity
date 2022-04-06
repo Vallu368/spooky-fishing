@@ -1684,9 +1684,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishes:
-  - {fileID: 5001112006494061938, guid: 2326b56f3e3b58243bc3fdecc6165a2f, type: 3}
+  - {fileID: 11400000, guid: 7349a3aa866a96c41a58a657192dc1dd, type: 2}
+  - {fileID: 11400000, guid: 49afa48a1c4c0d944bff66d57d0538cb, type: 2}
   i: 0
   fishing: {fileID: 13993188}
+  index: 0
+  inventory: {fileID: 0}
 --- !u!33 &1437812835
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7184,6 +7187,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5305786215822889920, guid: 67e95adfe462f834b84677b745a49912, type: 3}
   m_PrefabInstance: {fileID: 5305786216392128141}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1668685215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668685213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07351a845a07d7c4ab5d9572efda7d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!114 &1668685218
 MonoBehaviour:
   m_ObjectHideFlags: 0

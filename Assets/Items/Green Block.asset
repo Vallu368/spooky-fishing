@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b75b19191e62f459a289fcb29477d2, type: 3}
   m_Name: Green Block
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Green Block
   itemIcon: {fileID: 0}
   itemType: 0
-  prefab: {fileID: 0}
+  prefab: {fileID: 5001112006494061938, guid: a3b7baca58d573042bce89db7930e59c, type: 3}
   Description: 

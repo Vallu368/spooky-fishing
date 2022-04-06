@@ -38,6 +38,7 @@ public class FishScript : MonoBehaviour
 
     public void CaughtFish()
     {
+        inventory.RefreshUI();
         inventory.Add(fishes[index]);
     }
 }
