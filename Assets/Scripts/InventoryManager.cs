@@ -63,11 +63,16 @@ public class InventoryManager : MonoBehaviour
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemIcon;
                 slots[i].transform.GetChild(0).GetComponent<Button>().ID = items[i].itemID;
+                slots[i].transform.GetChild(0).GetComponent<Button>().descriptionText = items[i].description;
+                slots[i].transform.GetChild(0).GetComponent<Button>().sprite = items[i].itemIcon;
             }
             catch
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = false;
+                slots[i].transform.GetChild(0).GetComponent<Button>().ID = 0;
+                slots[i].transform.GetChild(0).GetComponent<Button>().descriptionText = "oh fuck";
+                slots[i].transform.GetChild(0).GetComponent<Button>().sprite = null;
             }
         }
     }

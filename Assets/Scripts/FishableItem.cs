@@ -5,7 +5,6 @@ public class FishableItem : ItemClass
 {
     public ItemType itemType;
     public GameObject prefab;
-    public string Description;
     public enum ItemType
     {
         fish,
