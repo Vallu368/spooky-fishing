@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private bool inventoryOpen = false;
 
+    private int nextUpdate = 1;
     private void Start()
     {
         inventoryPanel.SetActive(false);
@@ -19,21 +20,37 @@ public class InventoryManager : MonoBehaviour
         slots = new GameObject[slotHolder.transform.childCount];
         for (int i = 0; i < slotHolder.transform.childCount; i++)
             slots[i] = slotHolder.transform.GetChild(i).gameObject;
+        Debug.Log(slotHolder.transform.childCount);
 
         RefreshUI();
     }
 
     private void Update()
     {
-        if (Input.GetKey("i"))
+        if (Input.GetKeyDown("i"))
         {
-            inventoryOpen = true;
+            if (inventoryOpen == false)
+            {
+                inventoryPanel.SetActive(true);
+                inventoryOpen = true;
+            } else
+            {
+                inventoryPanel.SetActive(false);
+                inventoryOpen = false;
+            }
         }
-        if (inventoryOpen)
+
+        if (Time.time >= nextUpdate)
         {
-            inventoryPanel.SetActive(true);
+
+            nextUpdate = Mathf.FloorToInt(Time.time) + 1;
+            UpdateEverySecond();
         }
-        else inventoryPanel.SetActive(false);
+    }
+
+    private void UpdateEverySecond()
+    {
+
     }
 
 
@@ -45,6 +62,7 @@ public class InventoryManager : MonoBehaviour
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
                 slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemIcon;
+                slots[i].transform.GetChild(0).GetComponent<Button>().ID = items[i].itemID;
             }
             catch
             {
@@ -55,6 +73,9 @@ public class InventoryManager : MonoBehaviour
     }
     public void Add(ItemClass item)
     {
+        
         items.Add(item);
+        Debug.Log("add item");
+        RefreshUI();
     }
 }
