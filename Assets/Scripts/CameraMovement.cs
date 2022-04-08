@@ -59,7 +59,8 @@ public class CameraMovement : MonoBehaviour
         {
             if (lookDown)
             {
-                lookForward = true;
+                lookForward = true; 
+                Debug.Log("Looking forward...");
                 inMotion = true;
 
                 lookDown = false;
@@ -71,20 +72,25 @@ public class CameraMovement : MonoBehaviour
         }
         if (Input.GetKey("s"))
         {
-            lookDown = true;
-            inMotion = true;
+            if (!lookDown)
+			{
+                lookDown = true;
+                Debug.Log("Looking down...");
+                inMotion = true;
 
-            lookForward = false;
-            lookLeft = false;
-            lookRight = false;
-            lookBackLeft = false;
-            lookBackRight = false;
+                lookForward = false;
+                lookLeft = false;
+                lookRight = false;
+                lookBackLeft = false;
+                lookBackRight = false;
+            }
         }
         if (Input.GetKey("a"))
         {
             if (lookForward || lookDown)
             {
-                lookLeft = true;
+                lookLeft = true; 
+                Debug.Log("Looking left...");
                 inMotion = true;
 
                 lookDown = false;
@@ -96,6 +102,7 @@ public class CameraMovement : MonoBehaviour
             else if  (lookRight)
             {
                 lookForward = true;
+                Debug.Log("Looking forward...");
                 inMotion = true;
 
                 lookLeft = false;
@@ -107,6 +114,7 @@ public class CameraMovement : MonoBehaviour
             else if (transform.rotation == leftRotation)
             {
                 lookBackLeft = true;
+                Debug.Log("Looking back-left...");
                 inMotion = true;
 
                 lookLeft = false;
@@ -115,6 +123,7 @@ public class CameraMovement : MonoBehaviour
             else if (lookBackRight)
             {
                 lookRight = true;
+                Debug.Log("Looking right...");
                 inMotion = true;
 
                 lookBackRight = false;
@@ -130,6 +139,7 @@ public class CameraMovement : MonoBehaviour
             if (lookDown || lookForward)
             {
                 lookRight = true;
+                Debug.Log("Looking right...");
                 inMotion = true;
 
                 lookForward = false;
@@ -141,6 +151,7 @@ public class CameraMovement : MonoBehaviour
             else if (lookLeft)
             {
                 lookForward = true;
+                Debug.Log("Looking forward...");
                 inMotion = true;
 
                 lookLeft = false;
@@ -152,6 +163,7 @@ public class CameraMovement : MonoBehaviour
             else if (lookBackLeft)
             {
                 lookLeft = true;
+                Debug.Log("Looking left...");
                 inMotion = true;
 
                 lookBackLeft = false;
@@ -163,6 +175,7 @@ public class CameraMovement : MonoBehaviour
             else if (transform.rotation == rightRotation)
             {
                 lookBackRight = true;
+                Debug.Log("Looking back-right...");
                 inMotion = true;
 
                 lookRight = false;
