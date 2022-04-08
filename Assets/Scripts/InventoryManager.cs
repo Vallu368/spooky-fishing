@@ -78,9 +78,15 @@ public class InventoryManager : MonoBehaviour
     }
     public void Add(ItemClass item)
     {
+        if (!items.Contains(item))
+        {
+            items.Add(item);
+            Debug.Log("add item");
+            RefreshUI();
+        } else
+        {
+            Debug.Log("didnt add item");
+        }
         
-        items.Add(item);
-        Debug.Log("add item");
-        RefreshUI();
     }
 }
