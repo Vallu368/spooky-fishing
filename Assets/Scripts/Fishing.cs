@@ -22,7 +22,6 @@ public class Fishing : MonoBehaviour
 
 
     public CameraMovement cameraMovement;
-    public GameObject test;
     public GameObject fish;
     public FishScript fishScript;
     void Start()

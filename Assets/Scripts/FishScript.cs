@@ -25,7 +25,7 @@ public class FishScript : MonoBehaviour
     {
         index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
         var fish = Instantiate(fishes[index].prefab, this.transform); // spawnaa kalan
-        Destroy(fish, 2);
+        Destroy(fish, 4);
 
 
         

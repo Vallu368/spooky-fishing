@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
     private GameObject[] slots;
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private bool inventoryOpen = false;
+    public int itemsFishedTotal = 0;
 
     private int nextUpdate = 1;
     private void Start()
@@ -78,6 +79,7 @@ public class InventoryManager : MonoBehaviour
     }
     public void Add(ItemClass item)
     {
+        itemsFishedTotal++;
         if (!items.Contains(item))
         {
             items.Add(item);
