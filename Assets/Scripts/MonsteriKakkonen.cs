@@ -50,7 +50,7 @@ public class MonsteriKakkonen : MonoBehaviour
             {
                 Debug.Log("you died oof ouch");
             }
-            if (cam.lookLeft && cam.time == 10) //playeri kattoi monsteria tarpeeksi kauank
+            if (cam.lookLeft && cam.time == 10) //playeri kattoi monsteria tarpeeksi kauan
             {
                 Debug.Log("fading");
                 FadeOut();

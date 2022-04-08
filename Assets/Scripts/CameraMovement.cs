@@ -203,7 +203,7 @@ public class CameraMovement : MonoBehaviour
         {
             Quaternion currentRotation = transform.rotation;
             transform.rotation = Quaternion.RotateTowards(currentRotation, downRotation, Time.deltaTime * rotateSpeed);
-            
+                
             if (transform.rotation == downRotation)
             {
                 inMotion = false;
