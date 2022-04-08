@@ -14,7 +14,7 @@ public class MonsterTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("f"))
+        if (Input.GetKey("u"))
         {
             canSpawn = true;
         }
@@ -39,7 +39,7 @@ public class MonsterTest : MonoBehaviour
     {
         if (canSpawn)
         {
-            i = Random.Range(0, 10);
+            i = Random.Range(-5, 6);
         }
     }
 }

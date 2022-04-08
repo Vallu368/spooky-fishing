@@ -5,12 +5,15 @@ using UnityEngine;
 public class lightF : MonoBehaviour
 {
     [SerializeField] GameObject Flashlight;
+    [SerializeField] GameObject EnemyRip;
     private bool FlashlightActive = true;
+    markoscript marko;
 
 
     void Start()
     {
         Flashlight.gameObject.SetActive(true);
+        marko = EnemyRip.GetComponent<markoscript>();
     }
 
     void Update()
@@ -21,12 +24,13 @@ public class lightF : MonoBehaviour
             {
                 Flashlight.gameObject.SetActive(true);
                 FlashlightActive = true;
-                Debug.Log("OnOff");
+                marko.isLightOn = true;
             }
             else
             {
                 Flashlight.gameObject.SetActive(false);
                 FlashlightActive = false;
+                marko.isLightOn = false;
             }
         }
     }
