@@ -163,7 +163,6 @@ MonoBehaviour:
   wait: 0
   catchFishTimer: 0
   cameraMovement: {fileID: 963194229}
-  test: {fileID: 753007409}
   fish: {fileID: 1437812832}
   fishScript: {fileID: 1437812833}
 --- !u!4 &13993189
@@ -1691,6 +1690,8 @@ MonoBehaviour:
   - {fileID: 5001112006494061938, guid: 2326b56f3e3b58243bc3fdecc6165a2f, type: 3}
   i: 0
   fishing: {fileID: 13993188}
+  index: 0
+  inventory: {fileID: 0}
 --- !u!33 &1437812835
 MeshFilter:
   m_ObjectHideFlags: 0

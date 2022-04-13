@@ -6,6 +6,10 @@ public class markoscript : MonoBehaviour
 {
     public bool isLightOn;
     MeshRenderer rend;
+    private void Move(Vector3 target, float movementspeed)
+    {
+        transform.position += (target - transform.position).normalized * movementspeed * Time.deltaTime;
+    }
 
     void Start()
     {

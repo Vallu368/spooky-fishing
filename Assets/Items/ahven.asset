@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b75b19191e62f459a289fcb29477d2, type: 3}
+  m_Name: ahven
+  m_EditorClassIdentifier: 
+  itemName: ahven
+  itemIcon: {fileID: 21300000, guid: 414719bceae39e64692d45a278cb6453, type: 3}
+  itemID: 0
+  description: This one is also a fish.
+  itemType: 0
+  prefab: {fileID: 2064107109928752438, guid: 81f3f3afa91b7c44a84bb5a8bd6cebf6, type: 3}

@@ -23,7 +23,6 @@ public class CameraMovement : MonoBehaviour
     public bool lookBackLeft = false;
 
     private int nextUpdate = 1;
-
     public void Start()
     {
         transform.rotation = downRotation;
