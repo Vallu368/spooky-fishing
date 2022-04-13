@@ -537,6 +537,11 @@ MonoBehaviour:
   fishes:
   - {fileID: 11400000, guid: 49afa48a1c4c0d944bff66d57d0538cb, type: 2}
   - {fileID: 11400000, guid: 7349a3aa866a96c41a58a657192dc1dd, type: 2}
+  - {fileID: 11400000, guid: 297576a1077a203478c26d23b63ea6ef, type: 2}
+  - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
+  - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
+  - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
+  - {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   i: 0
   fishing: {fileID: 1519166950}
   index: 0
