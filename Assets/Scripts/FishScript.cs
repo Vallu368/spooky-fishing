@@ -11,6 +11,8 @@ public class FishScript : MonoBehaviour
     public int index = 0;
     public InventoryManager inventory;
 
+    public Animator animator;
+
 
     private void Update()
     {
@@ -25,7 +27,7 @@ public class FishScript : MonoBehaviour
     {
         index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
         var fish = Instantiate(fishes[index].prefab, this.transform); // spawnaa kalan
-        Destroy(fish, 5);
+        Destroy(fish, 2);
 
 
         
@@ -38,6 +40,7 @@ public class FishScript : MonoBehaviour
 
     public void CaughtFish()
     {
+        animator.Play("fish up");
         inventory.RefreshUI();
         inventory.Add(fishes[index]);
     }

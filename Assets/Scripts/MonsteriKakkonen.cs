@@ -7,7 +7,6 @@ public class MonsteriKakkonen : MonoBehaviour
     public CameraMovement cam;
     public GameObject kakkonen;
 
-    public int phase = 0;
     public int timer = 0;
 
     //puoli mihin pit‰‰ kattoa jotta monsteri katoaa
@@ -15,7 +14,8 @@ public class MonsteriKakkonen : MonoBehaviour
     public bool leftSide = false;
     public bool rightSide = false;
     public bool front = false;
-    public bool back = false;
+    public bool backRight = false;
+    public bool backLeft = false;
 
     public int fadeSpeed;
 
@@ -52,9 +52,77 @@ public class MonsteriKakkonen : MonoBehaviour
             }
             if (cam.lookLeft && cam.time == 10) //playeri kattoi monsteria tarpeeksi kauan
             {
-                Debug.Log("fading");
+               // Debug.Log("fading");
                 FadeOut();
 
+            }
+            if (rightSide) //jos pit‰‰ katsoa oikealle
+            {
+                if (cam.lookRight) //playeri kattoo oikealle
+                {
+                    playerNoticed = true;
+                }
+                if (playerNoticed && !cam.lookRight) //jos playeri katsoi oikealle ja k‰‰ntyi pois
+                {
+                    Debug.Log("you died oof ouch");
+                }
+                if (cam.lookRight && cam.time == 10) //playeri kattoi monsteria tarpeeksi kauan
+                {
+                    // Debug.Log("fading");
+                    FadeOut();
+
+                }
+            }
+            if (front) //jos pit‰‰ katsoa eteen
+            {
+                if (cam.lookForward) //playeri kattoo eteen
+                {
+                    playerNoticed = true;
+                }
+                if (playerNoticed && !cam.lookForward) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
+                {
+                    Debug.Log("you died oof ouch");
+                }
+                if (cam.lookForward && cam.time == 10) //playeri kattoi monsteria tarpeeksi kauan
+                {
+                    // Debug.Log("fading");
+                    FadeOut();
+
+                }
+            }
+            if (backLeft) //jos pit‰‰ katsoa takavasemmalle
+            {
+                if (cam.lookBackLeft) //playeri kattoo takavasemmalle
+                {
+                    playerNoticed = true;
+                }
+                if (playerNoticed && !cam.lookBackLeft) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
+                {
+                    Debug.Log("you died oof ouch");
+                }
+                if (cam.lookBackLeft && cam.time == 10) //playeri kattoi monsteria tarpeeksi kauan
+                {
+                    // Debug.Log("fading");
+                    FadeOut();
+
+                }
+            }
+            if (backRight) //jos pit‰‰ katsoa vasemmalle
+            {
+                if (cam.lookBackRight) //playeri kattoo vasemmalle
+                {
+                    playerNoticed = true;
+                }
+                if (playerNoticed && !cam.lookBackRight) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
+                {
+                    Debug.Log("you died oof ouch");
+                }
+                if (cam.lookBackRight && cam.time == 10) //playeri kattoi monsteria tarpeeksi kauan
+                {
+                    // Debug.Log("fading");
+                    FadeOut();
+
+                }
             }
         }
     }
