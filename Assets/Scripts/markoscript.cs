@@ -6,6 +6,12 @@ public class markoscript : MonoBehaviour
 {
     public bool isLightOn;
     MeshRenderer rend;
+
+    public bool leftSide = false;
+    public bool rightSide = false;
+    public bool front = false;
+    public bool backRight = false;
+    public bool backLeft = false;
     private void Move(Vector3 target, float movementspeed)
     {
         transform.position += (target - transform.position).normalized * movementspeed * Time.deltaTime;
