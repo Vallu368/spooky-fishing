@@ -41,6 +41,12 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
+        if (inventoryOpen)
+        {
+            Time.timeScale = 0;
+        }
+        else Time.timeScale = 1;
+
         if (Time.time >= nextUpdate)
         {
 
