@@ -35,7 +35,7 @@ public class GameOver : MonoBehaviour
         {
             if (isPlayerDead)
             {
-                isPlayerDead=false;
+                isPlayerDead = false;
                 ReloadScene();
             }
         }
