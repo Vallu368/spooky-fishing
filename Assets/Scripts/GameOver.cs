@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene("Main Scene");
+        Time.timeScale = 1;
 
         Debug.Log("restarted");
     }
@@ -21,8 +22,16 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void GameEnded()
+    {
+        Time.timeScale = 0;
+    }
+
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.I))
+        {
+                ReloadScene();
+        }
     }
 }

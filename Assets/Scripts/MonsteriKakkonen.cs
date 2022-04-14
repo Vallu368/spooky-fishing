@@ -7,6 +7,8 @@ public class MonsteriKakkonen : MonoBehaviour
     public CameraMovement cam;
     public GameObject kakkonen;
     public GameObject gameOverScreen;
+    private GameOver gameOverScript;
+    public GameObject gameOverCanvas;
 
     public int timer = 0;
 
@@ -25,13 +27,13 @@ public class MonsteriKakkonen : MonoBehaviour
     public bool playerNoticed = false;
     private void Start()
     {
-        
+        gameOverScript = gameOverCanvas.GetComponent<GameOver>();
     }
     private void Update()
     {
         if (timer == 30) // jos timer menee tuohon ja et oo kattonu siihen niin game over
         {
-            gameOverScreen.SetActive(true);
+            PlayerDies();
         }
         if (Time.time >= nextUpdate)
         {
@@ -68,6 +70,11 @@ public class MonsteriKakkonen : MonoBehaviour
         }
     }
 
+    private void PlayerDies()
+    {
+        gameOverScreen.SetActive(true);
+        gameOverScript.GameEnded();
+    }
     private void FadeOut()
     {
         Destroy(kakkonen); //fadeout t‰nne
@@ -82,7 +89,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookLeft) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
         {
-            gameOverScreen.SetActive(true);
+            PlayerDies();
         }
         if (cam.lookLeft && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
@@ -99,7 +106,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookRight) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
         {
-            gameOverScreen.SetActive(true);
+            PlayerDies();
         }
         if (cam.lookRight && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
@@ -116,7 +123,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookForward) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
         {
-            gameOverScreen.SetActive(true);
+            PlayerDies();
         }
         if (cam.lookForward && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
@@ -133,7 +140,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookBackLeft) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
         {
-            gameOverScreen.SetActive(true);
+            PlayerDies();
         }
         if (cam.lookBackLeft && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
@@ -150,7 +157,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookBackRight) //jos playeri katsoi vasemalle ja k‰‰ntyi pois
         {
-            gameOverScreen.SetActive(true);
+            PlayerDies();
             Debug.Log("you died oof ouch");
         }
         if (cam.lookBackRight && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan

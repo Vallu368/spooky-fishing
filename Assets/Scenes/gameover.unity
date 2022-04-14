@@ -526,7 +526,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Marko: {fileID: 0}
   Kakkonen: {fileID: 0}
-  SpawnPoints: []
+  spawnPoints: []
+  nextSpawn: 0
+  go: {fileID: 0}
+  canSpawnKakkonen: 0
+  index: 0
 --- !u!1 &719877186
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 963194229}
   kakkonen: {fileID: 1098295510}
+  gameOverScreen: {fileID: 2001479455}
+  gameOverCanvas: {fileID: 1848509984}
   timer: 0
   leftSide: 1
   rightSide: 0
@@ -6632,6 +6638,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1848509984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2280145709846060246, guid: 10b6b49740f805346a702e5607e37250, type: 3}
+  m_PrefabInstance: {fileID: 2280145709621932182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855005880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6758,6 +6769,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2001479455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4049984819226766675, guid: 10b6b49740f805346a702e5607e37250, type: 3}
+  m_PrefabInstance: {fileID: 2280145709621932182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2066057922
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,6 +6972,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 963194229}
   kakkonen: {fileID: 482056890122571659}
+  gameOverScreen: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
   timer: 0
   leftSide: 1
   rightSide: 0
@@ -7251,6 +7269,10 @@ PrefabInstance:
       propertyPath: inv
       value: 
       objectReference: {fileID: 1668685215}
+    - target: {fileID: 4049984819226766675, guid: 10b6b49740f805346a702e5607e37250, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10b6b49740f805346a702e5607e37250, type: 3}
 --- !u!4 &3685577934222745720
