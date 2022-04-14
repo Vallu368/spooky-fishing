@@ -12,21 +12,21 @@ public class GameOver : MonoBehaviour
     public void ReloadScene()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Main Scene");
         isPlayerDead = false;
+        SceneManager.LoadScene("Main Scene");
         Debug.Log("restarted");
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
         isPlayerDead = false;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void GameEnded()
     {
-        Time.timeScale = 0;
         isPlayerDead = true;
+        Time.timeScale = 0;
     }
 
     void Update()
@@ -35,8 +35,8 @@ public class GameOver : MonoBehaviour
         {
             if (isPlayerDead)
             {
-                ReloadScene();
                 isPlayerDead=false;
+                ReloadScene();
             }
         }
     }
