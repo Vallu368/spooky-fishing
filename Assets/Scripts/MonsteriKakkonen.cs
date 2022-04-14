@@ -73,6 +73,8 @@ public class MonsteriKakkonen : MonoBehaviour
     private void PlayerDies()
     {
         gameOverScreen.SetActive(true);
+        GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
+        GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
         gameOverScript.GameEnded();
     }
     private void FadeOut()
