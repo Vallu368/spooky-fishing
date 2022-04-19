@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GlobalGameState : MonoBehaviour
 {
+    public bool isGameOver = false;
+    public bool isGamePaused = false;
     public static GlobalGameState instance;
-
     void Awake() //Make static singleton instance
     {
         if (instance != null)
@@ -15,9 +16,22 @@ public class GlobalGameState : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void CallGameState()
+    public void Pause()
     {
-        Debug.Log("GlobalGameState.instance. can be called from anywhere");
+        Time.timeScale = 0f;
+        isGamePaused = true;
+    }
+
+    public void Unpause()
+    {
+        Time.timeScale = 1f;
+        isGamePaused = true;
+    }
+
+    public void ResetGame()
+    {
+        Unpause();
+        isGameOver = false;
     }
 }
 
