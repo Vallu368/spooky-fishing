@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - leftSide
+  - forward
+  - rightSide
+  - backLeft
+  - backRight
   layers:
   - Default
   - TransparentFX
