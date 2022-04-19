@@ -34,10 +34,12 @@ public class InventoryManager : MonoBehaviour
             {
                 inventoryPanel.SetActive(true);
                 inventoryOpen = true;
+                Time.timeScale = 0;
             } else
             {
                 inventoryPanel.SetActive(false);
                 inventoryOpen = false;
+                Time.timeScale = 1;
             }
         }
 
