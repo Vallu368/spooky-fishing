@@ -11,7 +11,7 @@ public class GameOver : MonoBehaviour
 
     public void ReloadScene()
     {
-        Time.timeScale = 1;
+        GlobalGameState.instance.ResetGame();
         isPlayerDead = false;
         SceneManager.LoadScene("Main Scene");
         Debug.Log("restarted");
@@ -20,24 +20,13 @@ public class GameOver : MonoBehaviour
     public void MainMenu()
     {
         isPlayerDead = false;
+        GlobalGameState.instance.ResetGame();
         SceneManager.LoadScene("MainMenu");
     }
 
     public void GameEnded()
     {
-        isPlayerDead = true;
-        Time.timeScale = 0;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.I))
-        {
-            if (isPlayerDead)
-            {
-                isPlayerDead = false;
-                ReloadScene();
-            }
-        }
+        GlobalGameState.instance.Stop();
+        GlobalGameState.instance.isGameOver = true;
     }
 }
