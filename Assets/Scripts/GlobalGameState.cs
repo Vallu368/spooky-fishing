@@ -6,6 +6,7 @@ public class GlobalGameState : MonoBehaviour
 {
     public bool isGameOver = false;
     public bool isGamePaused = false;
+    public bool isInventoryOpen = false;
     public static GlobalGameState instance;
     void Awake() //Make static singleton instance
     {
@@ -16,21 +17,21 @@ public class GlobalGameState : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public void Pause()
+    public void Stop()
     {
         Time.timeScale = 0f;
-        isGamePaused = true;
     }
 
-    public void Unpause()
+    public void Resume()
     {
         Time.timeScale = 1f;
-        isGamePaused = true;
     }
 
     public void ResetGame()
     {
-        Unpause();
+        Resume();
+        isGamePaused = false;
+        isInventoryOpen = false;
         isGameOver = false;
     }
 }

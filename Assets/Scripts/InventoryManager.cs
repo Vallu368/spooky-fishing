@@ -28,18 +28,20 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("i"))
+        if (Input.GetKeyDown("i") && !GlobalGameState.instance.isGameOver && !GlobalGameState.instance.isGamePaused)
         {
             if (inventoryOpen == false)
             {
                 inventoryPanel.SetActive(true);
                 inventoryOpen = true;
-                Time.timeScale = 0;
+                GlobalGameState.instance.Stop();
+                GlobalGameState.instance.isInventoryOpen = true;
             } else
             {
                 inventoryPanel.SetActive(false);
                 inventoryOpen = false;
-                Time.timeScale = 1;
+                GlobalGameState.instance.Resume();
+                GlobalGameState.instance.isInventoryOpen = false;
             }
         }
 

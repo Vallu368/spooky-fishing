@@ -12,14 +12,12 @@ public class GameOver : MonoBehaviour
     public void ReloadScene()
     {
         GlobalGameState.instance.ResetGame();
-        isPlayerDead = false;
         SceneManager.LoadScene("Main Scene");
         Debug.Log("restarted");
     }
 
     public void MainMenu()
     {
-        isPlayerDead = false;
         GlobalGameState.instance.ResetGame();
         SceneManager.LoadScene("MainMenu");
     }

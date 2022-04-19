@@ -11,7 +11,7 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !GlobalGameState.instance.isInventoryOpen && !GlobalGameState.instance.isGameOver)
         {
             if (isGamePaused)
             {
@@ -23,14 +23,16 @@ public class Pause : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        GlobalGameState.instance.Resume();
         isGamePaused = false;
+        GlobalGameState.instance.isGamePaused = false;
     }
     void PauseGame()
     {
         pauseMenu.SetActive(true);
-        Time.timeScale = 0;
+        GlobalGameState.instance.Stop();
         isGamePaused = true;
+        GlobalGameState.instance.isGamePaused = true;
     }
 
     public void LoadMenu()
