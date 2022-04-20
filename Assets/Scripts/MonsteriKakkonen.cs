@@ -14,6 +14,7 @@ public class MonsteriKakkonen : MonoBehaviour
 
     //puoli mihin pitää kattoa jotta monsteri katoaa
     //sen vois laittaa spawnerista
+    private bool isPlayerAlive = true;
     public bool leftSide = false;
     public bool rightSide = false;
     public bool front = false;
@@ -31,9 +32,10 @@ public class MonsteriKakkonen : MonoBehaviour
     }
     private void Update()
     {
-        if (timer == 30) // jos timer menee tuohon ja et oo kattonu siihen niin game over
+        if (timer == 30 && isPlayerAlive) // jos timer menee tuohon ja et oo kattonu siihen niin game over
         {
             PlayerDies();
+            isPlayerAlive = false;
         }
         if (Time.time >= nextUpdate)
         {

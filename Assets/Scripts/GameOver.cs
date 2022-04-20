@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
     public void ReloadScene()
     {
         GlobalGameState.instance.ResetGame();
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("restarted");
     }
 
