@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8acf8c362a68d74eb9ac100ef5a076f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Marko: {fileID: 9210733796618967770, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
+  Marko: {fileID: 4933524828837046244}
   Kakkonen: {fileID: 482056890122571659}
   spawnPoints:
   - {fileID: 1592599062}
@@ -270,6 +270,7 @@ MonoBehaviour:
   nextSpawn: 0
   go: {fileID: 0}
   canSpawnKakkonen: 0
+  canSpawnMarko: 0
   index: 0
 --- !u!1 &388953815
 GameObject:
@@ -7337,10 +7338,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3685577934222745720}
     m_Modifications:
-    - target: {fileID: 3081943731346455834, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8492239899365351635, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7389,18 +7386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MarkoSkin
       objectReference: {fileID: 0}
-    - target: {fileID: 9210733796618967770, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194229}
-    - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
-      propertyPath: Marko
-      value: 
-      objectReference: {fileID: 4933524828837046244}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: gameOverCanvas
       value: 
