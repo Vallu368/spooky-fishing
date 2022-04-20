@@ -24,7 +24,8 @@ public class GameOver : MonoBehaviour
 
     public void GameEnded()
     {
+        Debug.Log("Game Ended");
+		GlobalGameState.instance.isGameOver = true;
         GlobalGameState.instance.Stop();
-        GlobalGameState.instance.isGameOver = true;
     }
 }

@@ -12,7 +12,7 @@ public class MonsteriKakkonen : MonoBehaviour
 
     public int timer = 0;
 
-    //puoli mihin pitää kattoa jotta monsteri katoaa
+    //puoli mihin pitï¿½ï¿½ kattoa jotta monsteri katoaa
     //sen vois laittaa spawnerista
     private bool isPlayerAlive = true;
     public bool leftSide = false;
@@ -32,37 +32,39 @@ public class MonsteriKakkonen : MonoBehaviour
     }
     private void Update()
     {
-        if (timer == 30 && isPlayerAlive) // jos timer menee tuohon ja et oo kattonu siihen niin game over
-        {
-            PlayerDies();
-            isPlayerAlive = false;
-        }
-        if (Time.time >= nextUpdate)
-        {
+		if(!GlobalGameState.instance.isGameOver)
+			{
+			if (timer == 30 && isPlayerAlive) // jos timer menee tuohon ja et oo kattonu siihen niin game over
+			{
+				PlayerDies();
+			}
+			if (Time.time >= nextUpdate)
+			{
 
-            nextUpdate = Mathf.FloorToInt(Time.time) + 1;
-            UpdateEverySecond();
-        }
+				nextUpdate = Mathf.FloorToInt(Time.time) + 1;
+				UpdateEverySecond();
+			}
 
 
-        if (leftSide) //jos pitää katsoa vasemmalle
-        {
-            LookLeft();
-        }
-        else if (rightSide) //pitää kattoo oikeelle
-        {
-            LookRight();
-        }
-        else if (front) //pitää kattoo eteen
-        {
-            LookForward();
-        } else if (backLeft) //takavasen
-        {
-            LookBackLeft();
-        } else if (backRight) //takaoikee
-        {
-            LookBackRight();
-        }
+			if (leftSide) //jos pitï¿½ï¿½ katsoa vasemmalle
+			{
+				LookLeft();
+			}
+			else if (rightSide) //pitï¿½ï¿½ kattoo oikeelle
+			{
+				LookRight();
+			}
+			else if (front) //pitï¿½ï¿½ kattoo eteen
+			{
+				LookForward();
+			} else if (backLeft) //takavasen
+			{
+				LookBackLeft();
+			} else if (backRight) //takaoikee
+			{
+				LookBackRight();
+			}
+		}
     }
     private void UpdateEverySecond()
     {
@@ -72,16 +74,21 @@ public class MonsteriKakkonen : MonoBehaviour
         }
     }
 
-    private void PlayerDies()
-    {
-        gameOverScreen.SetActive(true);
-        GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
-        GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
-        gameOverScript.GameEnded();
+	private void PlayerDies()
+	{
+		if(isPlayerAlive)
+		{
+			isPlayerAlive = false;
+			gameOverScript.GameEnded();
+			gameOverScreen.SetActive(true);
+			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
+			GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
+		}
+
     }
     private void FadeOut()
     {
-        Destroy(kakkonen); //fadeout tänne
+        Destroy(kakkonen); //fadeout tï¿½nne
 
        
     }
@@ -91,7 +98,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookLeft) //jos playeri katsoi vasemalle ja kääntyi pois
+        if (playerNoticed && !cam.lookLeft) //jos playeri katsoi vasemalle ja kï¿½ï¿½ntyi pois
         {
             PlayerDies();
         }
@@ -108,7 +115,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookRight) //jos playeri katsoi vasemalle ja kääntyi pois
+        if (playerNoticed && !cam.lookRight) //jos playeri katsoi vasemalle ja kï¿½ï¿½ntyi pois
         {
             PlayerDies();
         }
@@ -125,7 +132,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookForward) //jos playeri katsoi vasemalle ja kääntyi pois
+        if (playerNoticed && !cam.lookForward) //jos playeri katsoi vasemalle ja kï¿½ï¿½ntyi pois
         {
             PlayerDies();
         }
@@ -142,7 +149,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookBackLeft) //jos playeri katsoi vasemalle ja kääntyi pois
+        if (playerNoticed && !cam.lookBackLeft) //jos playeri katsoi vasemalle ja kï¿½ï¿½ntyi pois
         {
             PlayerDies();
         }
@@ -159,7 +166,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookBackRight) //jos playeri katsoi vasemalle ja kääntyi pois
+        if (playerNoticed && !cam.lookBackRight) //jos playeri katsoi vasemalle ja kï¿½ï¿½ntyi pois
         {
             PlayerDies();
             Debug.Log("you died oof ouch");
