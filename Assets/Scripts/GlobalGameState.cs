@@ -20,11 +20,13 @@ public class GlobalGameState : MonoBehaviour
     public void Stop()
     {
         Time.timeScale = 0f;
+        Debug.Log("Timescale is now 0");
     }
 
     public void Resume()
     {
         Time.timeScale = 1f;
+        Debug.Log("Timescale is now 1");
     }
 
     public void ResetGame()
