@@ -10,9 +10,11 @@ public class MonsterSpawn : MonoBehaviour
     private int nextUpdate = 1;
     public int nextSpawn = 0;
     private MonsteriKakkonen kakkonenScript;
+    private markoscript markoScript;
     public GameOver go;
 
     public bool canSpawnKakkonen = false;
+    public bool canSpawnMarko = false;
 
     public int index;
     void Start()
@@ -32,9 +34,19 @@ public class MonsterSpawn : MonoBehaviour
 
         index = Random.Range(0, spawnPoints.Length);
 
-        if (nextSpawn == 15)
+        if (nextSpawn == 45) //15 -> 45
         {
             canSpawnKakkonen = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            SpawnKakkonen();
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SpawnMarko();
         }
         
     }
@@ -57,6 +69,18 @@ public class MonsterSpawn : MonoBehaviour
         kakkonenScript.WhichSide(spawnPoints[index].tag);
         nextSpawn = 0;
         
+    }
+
+    void SpawnMarko()
+    {
+        var mon = Instantiate(Marko, spawnPoints[index].transform);
+        //mon.transform.localRotation = spawnPoints[index].transform.rotation;
+        mon.SetActive(true);
+        canSpawnMarko = false;
+        markoScript = mon.GetComponent<markoscript>();
+        markoScript.WhichSide(spawnPoints[index].tag);
+        nextSpawn = 0;
+
     }
 
 
