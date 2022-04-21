@@ -16,4 +16,4 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: ea29851e19ac65f43af64ee7e116a4dd, type: 3}
   description: Damn what a nice family.
   itemType: 1
-  prefab: {fileID: 9116011097964759826, guid: 7d363488adbf2f7478b6d4d235fd0748, type: 3}
+  prefab: {fileID: 919132149155446097, guid: 87a22fcbc2d983e4d820d2ca1c32e59c, type: 3}

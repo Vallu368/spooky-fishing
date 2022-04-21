@@ -1068,6 +1068,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1380545005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4142778020221370663, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
+  m_PrefabInstance: {fileID: 4142778018287248828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1380789064
 GameObject:
   m_ObjectHideFlags: 0
@@ -7224,10 +7229,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4142778019207432399, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4142778019846092830, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
       propertyPath: EnemyRip
       value: 
@@ -7240,38 +7241,6 @@ PrefabInstance:
       propertyPath: inventoryPanel
       value: 
       objectReference: {fileID: 1017586164}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.data[6]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.data[7]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
-    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: items.Array.data[8]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
 --- !u!1001 &4159852614882691021
@@ -7391,9 +7360,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194229}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
-      propertyPath: isLightOn
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: theLight
+      value: 
+      objectReference: {fileID: 1380545005}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: gameOverCanvas
       value: 

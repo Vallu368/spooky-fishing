@@ -16,4 +16,4 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 96008685e9651c2429a2cc743f98efc0, type: 3}
   description: I wonder how much that ring would make.
   itemType: 0
-  prefab: {fileID: 5496920564402877978, guid: 3d3fa193d70533940b5434c625a0eaf8, type: 3}
+  prefab: {fileID: 919132149155446097, guid: 67bd4b31a4c03bf438a060fe30854cf5, type: 3}
