@@ -206,7 +206,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899736253423498000}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.06784929, y: 0.58068883, z: 0.04803276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -292,6 +292,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
   - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
   - {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+  - {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
+  - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0
