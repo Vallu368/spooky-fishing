@@ -30,49 +30,52 @@ public class markoscript : MonoBehaviour
     void Start()
     {
         rend = GetComponent<MeshRenderer>();
-        gameOverScript = GetComponent<GameOver>();
+        gameOverScript = gameOverCanvas.GetComponent<GameOver>();
     }
 
 
     void Update()
     {
-        if (isLightOn)
+        if (!GlobalGameState.instance.isGameOver)
         {
-            rend.enabled = true;
-        }
-        else
-        {
-            rend.enabled = false;
-        }
+            if (isLightOn)
+            {
+                rend.enabled = true;
+            }
+            else
+            {
+                rend.enabled = false;
+            }
 
 
-        if (leftSide) //jos pit‰‰ katsoa vasemmalle
-        {
-            LookLeft();
-        }
-        else if (rightSide) //pit‰‰ kattoo oikeelle
-        {
-            LookRight();
-        }
-        else if (front) //pit‰‰ kattoo eteen
-        {
-            LookForward();
-        }
-        else if (backLeft) //takavasen
-        {
-            LookBackLeft();
-        }
-        else if (backRight) //takaoikee
-        {
-            LookBackRight();
-        }
+            if (leftSide) //jos pit‰‰ katsoa vasemmalle
+            {
+                LookLeft();
+            }
+            else if (rightSide) //pit‰‰ kattoo oikeelle
+            {
+                LookRight();
+            }
+            else if (front) //pit‰‰ kattoo eteen
+            {
+                LookForward();
+            }
+            else if (backLeft) //takavasen
+            {
+                LookBackLeft();
+            }
+            else if (backRight) //takaoikee
+            {
+                LookBackRight();
+            }
 
 
-        if (Time.time >= nextUpdate)
-        {
+            if (Time.time >= nextUpdate)
+            {
 
-            nextUpdate = Mathf.FloorToInt(Time.time) + 1;
-            UpdateEverySecond();
+                nextUpdate = Mathf.FloorToInt(Time.time) + 1;
+                UpdateEverySecond();
+            }
         }
     }
 
@@ -100,6 +103,7 @@ public class markoscript : MonoBehaviour
     private void FadeOut()
     {
         Destroy(Marko);
+        Debug.Log("he ded");
     }
 
     private void LookLeft()
@@ -114,7 +118,7 @@ public class markoscript : MonoBehaviour
             PlayerDies();
         }
 
-        if (!cam.lookLeft && isLightOn && cam.time == 2)            //jos k‰‰ntyy pois monsterista ja valot on pois p‰‰lt‰ pari sekkaa niin monsteri katoaa
+        if (!cam.lookLeft && !isLightOn && cam.time == 5)            //jos k‰‰ntyy pois monsterista ja valot on pois p‰‰lt‰ pari sekkaa niin monsteri katoaa
         {
             FadeOut();
         }
@@ -132,7 +136,7 @@ public class markoscript : MonoBehaviour
             PlayerDies();
         }
 
-        if (!cam.lookRight && isLightOn && cam.time == 2)
+        if (!cam.lookRight && !isLightOn && cam.time == 5)
         {
             FadeOut();
         }
@@ -150,7 +154,7 @@ public class markoscript : MonoBehaviour
             PlayerDies();
         }
 
-        if (!cam.lookForward && isLightOn && cam.time == 2)
+        if (!cam.lookForward && !isLightOn && cam.time == 5)
         {
             FadeOut();
         }
@@ -168,7 +172,7 @@ public class markoscript : MonoBehaviour
             PlayerDies();
         }
 
-        if (!cam.lookBackLeft && isLightOn && cam.time == 2)
+        if (!cam.lookBackLeft && !isLightOn && cam.time == 5)
         {
             FadeOut();
         }
@@ -186,7 +190,7 @@ public class markoscript : MonoBehaviour
             PlayerDies();
         }
 
-        if (!cam.lookBackRight && isLightOn && cam.time == 2)
+        if (!cam.lookBackRight && !isLightOn && cam.time == 5)
         {
             FadeOut();
         }
@@ -199,20 +203,16 @@ public class markoscript : MonoBehaviour
         if (tag == "leftSide")
         {
             leftSide = true;
-        }
-        else if (tag == "rightSide")
+        } else if (tag == "rightSide")
         {
             rightSide = true;
-        }
-        else if (tag == "forward")
+        } else if (tag == "forward")
         {
             front = true;
-        }
-        else if (tag == "backLeft")
+        } else if (tag == "backLeft")
         {
             backLeft = true;
-        }
-        else if (tag == "backRight")
+        } else if (tag == "backRight")
         {
             backRight = true;
         }
