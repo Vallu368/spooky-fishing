@@ -11,6 +11,8 @@ public class Fishing : MonoBehaviour
     public bool gotFish = false;
     public bool finishedFishing = false;
 
+    public int checkpointFish = 0;
+
     public bool caughtFish = false;
 
     public int i = 0;
@@ -37,6 +39,14 @@ public class Fishing : MonoBehaviour
 
             nextUpdate = Mathf.FloorToInt(Time.time) + 1;
             UpdateEverySecond();
+        }
+
+        if (fishScript.totalFishCaught == fishScript.totalFishForCheckpoint1)
+        {
+            checkpointFish = 1;
+        } else
+        {
+            checkpointFish = 0;
         }
 
         if (Input.GetKey("space") && cameraMovement.lookDown == true && isFishing == false) //alottaa kalastuksen jos katot alas ja et oo kalastamassa jo
@@ -111,10 +121,20 @@ public class Fishing : MonoBehaviour
 
             if (i == 1) //random numero on 1 = saat kalan
             {
-                anim.SetBool("caughtFish", true);
-                Debug.Log("fish!!");
-                fishScript.SpawnRandomPrefab();
-                gotFish = true;
+                if (checkpointFish == 1)
+                {
+                    anim.SetBool("caughtFish", true);
+                    Debug.Log("checkpoint Fish!!");
+                    fishScript.SpawnCheckpoint1();
+                    gotFish = true;
+                }
+                if (checkpointFish == 0)
+                {
+                    anim.SetBool("caughtFish", true);
+                    Debug.Log("fish!!");
+                    fishScript.SpawnRandomPrefab();
+                    gotFish = true;
+                }
             }
 
             if (gotFish) //saat kalan kiinni ja kaikki resettaa
@@ -132,7 +152,14 @@ public class Fishing : MonoBehaviour
             anim.SetBool("startedFishing", false);
             anim.SetBool("caughtFish", false);
             Debug.Log("caught fish!");
-            fishScript.CaughtFish();
+            if (checkpointFish == 1)
+            {
+                fishScript.CaughtCheckpoint1Fish();
+            }
+            if (checkpointFish == 0)
+            {
+                fishScript.CaughtFish();
+            }
             caughtFish = true;
             fishScript.SetGameObjectActive();
            // fish.transform.position = new Vector3(0f, 0.5f, 2f);

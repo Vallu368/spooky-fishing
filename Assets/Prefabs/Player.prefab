@@ -603,9 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotHolder: {fileID: 0}
-  items:
-  - {fileID: 11400000, guid: 49afa48a1c4c0d944bff66d57d0538cb, type: 2}
-  - {fileID: 11400000, guid: 7349a3aa866a96c41a58a657192dc1dd, type: 2}
+  items: []
   inventoryPanel: {fileID: 0}
   inventoryOpen: 0
   itemsFishedTotal: 0
@@ -957,7 +955,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3709685587625625570
 Transform:
   m_ObjectHideFlags: 0
