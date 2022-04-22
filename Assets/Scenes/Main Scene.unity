@@ -5643,13 +5643,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1668685215}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint1
+      value: 
+      objectReference: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: fishes.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: fishes.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
+      objectReference: {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: fishes.Array.data[8]
       value: 
@@ -5658,6 +5662,10 @@ PrefabInstance:
       propertyPath: fishes.Array.data[9]
       value: 
       objectReference: {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: totalFishForCheckpoint1
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
 --- !u!1001 &2277701935451606653
