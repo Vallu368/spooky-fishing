@@ -16,4 +16,4 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 07cf43c06455a9746a36bc728411ea91, type: 3}
   description: Omg someone sent me a love letter!
   itemType: 1
-  prefab: {fileID: 5850921694526931046, guid: a233193675bcd0049a9036841b2127ff, type: 3}
+  prefab: {fileID: 4125770701774784466, guid: 2136bd621e06a0c488600f28a2c1dd03, type: 3}

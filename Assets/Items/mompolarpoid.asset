@@ -16,4 +16,4 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 588ee1ed45183314b9c0c70c7413c44a, type: 3}
   description: Mom looks different, I stared at her.
   itemType: 0
-  prefab: {fileID: 3142274304943426837, guid: ab205da7c1728524ba99a63b89c1edf3, type: 3}
+  prefab: {fileID: 222513561611430347, guid: be719bf70d7c0a64faafd89e633272fc, type: 3}
