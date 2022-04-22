@@ -4,218 +4,213 @@ using UnityEngine;
 
 public class markoscript : MonoBehaviour
 {
-    public bool isLightOn;
-    MeshRenderer rend;
+	private bool isPlayerAlive = true;
+	public CameraMovement cam;
+	public GameObject Marko;
+	lightF playerLight;
+	public GameObject gameOverScreen;
+	private GameOver gameOverScript;
+	public GameObject gameOverCanvas;
 
-    private bool isPlayerAlive = true;
+	public bool leftSide = false;
+	public bool rightSide = false;
+	public bool front = false;
+	public bool backRight = false;
+	public bool backLeft = false;
 
-    public CameraMovement cam;
-    public GameObject Marko;
-    public GameObject gameOverScreen;
-    private GameOver gameOverScript;
-    public GameObject gameOverCanvas;
+	private int nextUpdate = 1;
 
-    public bool leftSide = false;
-    public bool rightSide = false;
-    public bool front = false;
-    public bool backRight = false;
-    public bool backLeft = false;
+	public bool playerNoticed = false;
 
-    private int nextUpdate = 1;
+	public int timer = 0;
 
-    public bool playerNoticed = false;
+	void Start()
+	{
+		gameOverScript = gameOverCanvas.GetComponent<GameOver>();
+		playerLight = GameObject.FindGameObjectWithTag("PlayerLight").GetComponent<lightF>(); //Find player light's script on Start to detect if flashlight is on
 
-    public int timer = 0;
-
-    void Start()
-    {
-        rend = GetComponent<MeshRenderer>();
-        gameOverScript = gameOverCanvas.GetComponent<GameOver>();
-    }
+	}
 
 
-    void Update()
-    {
-        if (!GlobalGameState.instance.isGameOver)
-        {
-            if (isLightOn)
-            {
-                rend.enabled = true;
-            }
-            else
-            {
-                rend.enabled = false;
-            }
+	void Update()
+	{
+		if (!GlobalGameState.instance.isGameOver)
+		{
 
 
-            if (leftSide) //jos pitää katsoa vasemmalle
-            {
-                LookLeft();
-            }
-            else if (rightSide) //pitää kattoo oikeelle
-            {
-                LookRight();
-            }
-            else if (front) //pitää kattoo eteen
-            {
-                LookForward();
-            }
-            else if (backLeft) //takavasen
-            {
-                LookBackLeft();
-            }
-            else if (backRight) //takaoikee
-            {
-                LookBackRight();
-            }
+			if (leftSide) //jos pitï¿½ï¿½ katsoa vasemmalle
+			{
+				LookLeft();
+			}
+			else if (rightSide) //pitï¿½ï¿½ kattoo oikeelle
+			{
+				LookRight();
+			}
+			else if (front) //pitï¿½ï¿½ kattoo eteen
+			{
+				LookForward();
+			}
+			else if (backLeft) //takavasen
+			{
+				LookBackLeft();
+			}
+			else if (backRight) //takaoikee
+			{
+				LookBackRight();
+			}
 
 
-            if (Time.time >= nextUpdate)
-            {
+			if (Time.time >= nextUpdate)
+			{
 
-                nextUpdate = Mathf.FloorToInt(Time.time) + 1;
-                UpdateEverySecond();
-            }
-        }
-    }
+				nextUpdate = Mathf.FloorToInt(Time.time) + 1;
+				UpdateEverySecond();
+			}
+		}
+	}
 
-    private void UpdateEverySecond()
-    {
-        if (!playerNoticed)
-        {
-            timer++;
-        }
-    }
+	private void UpdateEverySecond()
+	{
+		if (!playerNoticed)
+		{
+			timer++;
+		}
+	}
 
-    private void PlayerDies()
-    {
-        if (isPlayerAlive)
-        {
-            isPlayerAlive = false;
-            gameOverScript.GameEnded();
-            gameOverScreen.SetActive(true);
-            GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
-            GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
-        }
+	private void PlayerDies()
+	{
+		if (isPlayerAlive)
+		{
+			isPlayerAlive = false;
+			gameOverScript.GameEnded();
+			gameOverScreen.SetActive(true);
+			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
+			GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
+		}
 
-    }
+	}
 
-    private void FadeOut()
-    {
-        Destroy(Marko);
-        Debug.Log("he ded");
-    }
+	private void FadeOut()
+	{
+		Debug.Log("he ded");
+		Destroy(gameObject);
+	}
 
-    private void LookLeft()
-    {
-        if (cam.lookLeft)
-        {
-            playerNoticed = true;       //pelaaja huomattu
-        }
+	private void LookLeft()
+	{
+		if (cam.lookLeft)
+		{
+			playerNoticed = true;       //pelaaja huomattu
+		}
 
-        if (playerNoticed && cam.lookLeft && cam.time == 2)         //jos pelaaja on huomattu ja katotaan monsteria päin 2sek niin kuollaan
-        {
-            PlayerDies();
-        }
+		if (playerNoticed && cam.lookLeft && cam.time == 2)         //jos pelaaja on huomattu ja katotaan monsteria pï¿½in 2sek niin kuollaan
+		{
+			PlayerDies();
+		}
 
-        if (!cam.lookLeft && !isLightOn && cam.time == 5)            //jos kääntyy pois monsterista ja valot on pois päältä pari sekkaa niin monsteri katoaa
-        {
-            FadeOut();
-        }
-    }
+		if (!cam.lookLeft && !playerLight.flashlightActive) //Timer removed
+					//jos kï¿½ï¿½ntyy pois monsterista ja valot on pois pï¿½ï¿½ltï¿½ pari sekkaa niin monsteri katoaa
+		{
+			FadeOut();
+		}
+	}
 
-    private void LookRight()
-    {
-        if (cam.lookRight)
-        {
-            playerNoticed = true;
-        }
+	private void LookRight()
+	{
+		if (cam.lookRight)
+		{
+			playerNoticed = true;
+		}
 
-        if (playerNoticed && cam.lookRight && cam.time == 2)
-        {
-            PlayerDies();
-        }
+		if (playerNoticed && cam.lookRight && cam.time == 2)
+		{
+			PlayerDies();
+		}
 
-        if (!cam.lookRight && !isLightOn && cam.time == 5)
-        {
-            FadeOut();
-        }
-    }
+		if (!cam.lookRight && !playerLight.flashlightActive) //Timer removed
+		
+		{
+			FadeOut();
+		}
+	}
 
-    private void LookForward()
-    {
-        if (cam.lookForward)
-        {
-            playerNoticed = true;
-        }
+	private void LookForward()
+	{
+		if (cam.lookForward)
+		{
+			playerNoticed = true;
+		}
 
-        if (playerNoticed && cam.lookForward && cam.time == 2)
-        {
-            PlayerDies();
-        }
+		if (playerNoticed && cam.lookForward && cam.time == 2)
+		{
+			PlayerDies();
+		}
 
-        if (!cam.lookForward && !isLightOn && cam.time == 5)
-        {
-            FadeOut();
-        }
-    }
+		if (!cam.lookForward && !playerLight.flashlightActive) //Timer removed
+		
+		{
+			FadeOut();
+		}
+	}
 
-    private void LookBackLeft()
-    {
-        if (cam.lookBackLeft)
-        {
-            playerNoticed = true;
-        }
+	private void LookBackLeft()
+	{
+		if (cam.lookBackLeft)
+		{
+			playerNoticed = true;
+		}
 
-        if (playerNoticed && cam.lookBackLeft && cam.time == 2)
-        {
-            PlayerDies();
-        }
+		if (playerNoticed && cam.lookBackLeft && cam.time == 2)
+		{
+			PlayerDies();
+		}
 
-        if (!cam.lookBackLeft && !isLightOn && cam.time == 5)
-        {
-            FadeOut();
-        }
-    }
+		if (!cam.lookBackLeft && !playerLight.flashlightActive) //Timer removed
+		
+		{
+			FadeOut();
+		}
+	}
 
-    private void LookBackRight()
-    {
-        if (cam.lookBackRight)
-        {
-            playerNoticed = true;
-        }
+	private void LookBackRight()
+	{
+		if (cam.lookBackRight)
+		{
+			playerNoticed = true;
+		}
 
-        if (playerNoticed && cam.lookBackRight && cam.time == 2)
-        {
-            PlayerDies();
-        }
+		if (playerNoticed && cam.lookBackRight && cam.time == 2)
+		{
+			PlayerDies();
+		}
 
-        if (!cam.lookBackRight && !isLightOn && cam.time == 5)
-        {
-            FadeOut();
-        }
-    }
+		if (!cam.lookBackRight && !playerLight.flashlightActive) //Timer removed
+		
+		{
+			FadeOut();
+		}
+	}
 
-    public void WhichSide(string tag)
-    {
-        Debug.Log(tag);
+	public void WhichSide(string tag)
+	{
+		Debug.Log(tag);
 
-        if (tag == "leftSide")
-        {
-            leftSide = true;
-        } else if (tag == "rightSide")
-        {
-            rightSide = true;
-        } else if (tag == "forward")
-        {
-            front = true;
-        } else if (tag == "backLeft")
-        {
-            backLeft = true;
-        } else if (tag == "backRight")
-        {
-            backRight = true;
-        }
-    }
+		if (tag == "leftSide")
+		{
+			leftSide = true;
+		} else if (tag == "rightSide")
+		{
+			rightSide = true;
+		} else if (tag == "forward")
+		{
+			front = true;
+		} else if (tag == "backLeft")
+		{
+			backLeft = true;
+		} else if (tag == "backRight")
+		{
+			backRight = true;
+		}
+	}
 
 }

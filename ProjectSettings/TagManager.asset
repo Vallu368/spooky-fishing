@@ -9,6 +9,7 @@ TagManager:
   - rightSide
   - backLeft
   - backRight
+  - PlayerLight
   layers:
   - Default
   - TransparentFX

@@ -4,34 +4,28 @@ using UnityEngine;
 
 public class lightF : MonoBehaviour
 {
-    [SerializeField] GameObject Flashlight;
-    [SerializeField] GameObject EnemyRip;
-    private bool FlashlightActive = true;
-    markoscript marko;
+	Light flashLight;
+	public bool flashlightActive = true;
+	void Start()
+	{
+		flashLight = gameObject.GetComponent<Light>();
+		flashLight.enabled = true;
+	}
 
-
-    void Start()
-    {
-        Flashlight.gameObject.SetActive(true);
-        marko = EnemyRip.GetComponent<markoscript>();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (FlashlightActive == false)
-            {
-                Flashlight.gameObject.SetActive(true);
-                FlashlightActive = true;
-                marko.isLightOn = true;
-            }
-            else
-            {
-                Flashlight.gameObject.SetActive(false);
-                FlashlightActive = false;
-                marko.isLightOn = false;
-            }
-        }
-    }
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.F))
+		{
+			if (flashlightActive == false)
+			{
+				flashlightActive = true;
+				flashLight.enabled = true;	
+			}
+			else
+			{
+				flashlightActive = false;
+				flashLight.enabled = false;	
+			}
+		}
+	}
 }
