@@ -13,9 +13,15 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private bool inventoryOpen = false;
     public int itemsFishedTotal = 0;
 
-    private int nextUpdate = 1;
+    public GameObject pilkkivapa;
+    public GameObject spawnManager;
+    public FishScript fishScript;
+    public MonsterSpawn monsterSpawn;
+
     private void Start()
     {
+        spawnManager.GetComponent<MonsterSpawn>();
+        pilkkivapa.GetComponentInChildren<FishScript>();
         inventoryPanel.SetActive(false);
         inventoryOpen = false;
         slots = new GameObject[slotHolder.transform.childCount];
@@ -44,19 +50,20 @@ public class InventoryManager : MonoBehaviour
                 GlobalGameState.instance.isInventoryOpen = false;
             }
         }
-
-        if (Time.time >= nextUpdate)
-        {
-
-            nextUpdate = Mathf.FloorToInt(Time.time) + 1;
-            UpdateEverySecond();
+        if (items.Contains(fishScript.checkpoint1) & GlobalGameState.instance.progression == 0) {
+            GlobalGameState.instance.progression = 1;
+            Debug.Log("marko can spawn");
+            
         }
+        if (items.Contains(fishScript.checkpoint2) & GlobalGameState.instance.progression == 1)
+        {
+            GlobalGameState.instance.progression = 2;
+            Debug.Log("kakkonen can spawn");
+
+        }
+
     }
 
-    private void UpdateEverySecond()
-    {
-
-    }
 
 
     public void RefreshUI()

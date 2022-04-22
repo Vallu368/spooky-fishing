@@ -8,6 +8,8 @@ public class GlobalGameState : MonoBehaviour
     public bool isGamePaused = false;
     public bool isInventoryOpen = false;
     public static GlobalGameState instance;
+    public int progression = 0; // 0 on ei monstereita, 1 on marko, 2 on kummatki
+    public int totalFishCaught = 0; //monta kalaa/itemiä kalastettu
     void Awake() //Make static singleton instance
     {
         if (instance != null)

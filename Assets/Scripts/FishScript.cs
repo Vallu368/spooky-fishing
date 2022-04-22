@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class FishScript : MonoBehaviour
 {
-    public MonsterSpawn mSpawn;
     public FishableItem[] fishes;
     public FishableItem checkpoint1;
+    public FishableItem checkpoint2;
     public int i = 0;
     public Fishing fishing;
     public int index = 0;
     public InventoryManager inventory;
-    public int totalFishCaught;
-    public int totalFishForCheckpoint1 = 2;
+    public int totalFishForCheckpoint1 = 1;
+    public int totalFishForCheckpoint2 = 2;
     public Animator animator;
 
 
@@ -30,7 +30,7 @@ public class FishScript : MonoBehaviour
         index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
         var fish = Instantiate(fishes[index].prefab, this.transform); // spawnaa kalan
         Debug.Log("spawned " + fishes[index].itemName);
-        Destroy(fish, 4);
+        Destroy(fish, 3);
 
     }
     public void SpawnCheckpoint1()
@@ -42,6 +42,14 @@ public class FishScript : MonoBehaviour
         
     }
 
+    public void SpawnCheckpoint2()
+    {
+        Debug.Log("checkpoint 2");
+        var fish = Instantiate(checkpoint2.prefab, this.transform);
+        Debug.Log("spawned " + checkpoint2.itemName);
+        Destroy(fish, 3);
+    }
+
     public void SetGameObjectActive()
     {
         gameObject.SetActive(true);
@@ -49,17 +57,24 @@ public class FishScript : MonoBehaviour
 
     public void CaughtFish()
     {
-        totalFishCaught++;
+        GlobalGameState.instance.totalFishCaught++;
         animator.Play("fish up");
         inventory.RefreshUI();
         inventory.Add(fishes[index]);
     }
     public void CaughtCheckpoint1Fish()
     {
-        totalFishCaught++;
+        GlobalGameState.instance.totalFishCaught++;
         animator.Play("fish up");
         inventory.RefreshUI();
         inventory.Add(checkpoint1);
-        
+    }
+    public void CaughtCheckpoint2Fish()
+    {
+        GlobalGameState.instance.totalFishCaught++;
+        animator.Play("fish up");
+        inventory.RefreshUI();
+        inventory.Add(checkpoint1);
+
     }
 }

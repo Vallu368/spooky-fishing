@@ -41,13 +41,15 @@ public class Fishing : MonoBehaviour
             UpdateEverySecond();
         }
 
-        if (fishScript.totalFishCaught == fishScript.totalFishForCheckpoint1)
+        if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint1)
         {
             checkpointFish = 1;
-        } else
-        {
-            checkpointFish = 0;
         }
+        else if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint2)
+        {
+            checkpointFish = 2;
+        }
+        else checkpointFish = 0;
 
         if (Input.GetKey("space") && cameraMovement.lookDown == true && isFishing == false) //alottaa kalastuksen jos katot alas ja et oo kalastamassa jo
         {
@@ -128,6 +130,13 @@ public class Fishing : MonoBehaviour
                     fishScript.SpawnCheckpoint1();
                     gotFish = true;
                 }
+                if (checkpointFish == 2)
+                {
+                    anim.SetBool("caughtFish", true);
+                    Debug.Log("checkpoint Fish!!");
+                    fishScript.SpawnCheckpoint2();
+                    gotFish = true;
+                }
                 if (checkpointFish == 0)
                 {
                     anim.SetBool("caughtFish", true);
@@ -155,6 +164,11 @@ public class Fishing : MonoBehaviour
             if (checkpointFish == 1)
             {
                 fishScript.CaughtCheckpoint1Fish();
+
+            }
+            if (checkpointFish == 2)
+            {
+                fishScript.CaughtCheckpoint2Fish();
             }
             if (checkpointFish == 0)
             {

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 252647548}
   - component: {fileID: 252647549}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: SpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,6 +173,8 @@ MonoBehaviour:
   - {fileID: 1451127749}
   nextSpawn: 0
   go: {fileID: 0}
+  markoActive: 0
+  kakkonenActive: 0
   canSpawnKakkonen: 0
   canSpawnMarko: 0
   index: 0
@@ -342,6 +344,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2280145709049627383, guid: 10b6b49740f805346a702e5607e37250, type: 3}
   m_PrefabInstance: {fileID: 2280145709621932182}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &595806612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+  m_PrefabInstance: {fileID: 1899736254672639732}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200e4cd44fabe8b4d83452c05696ea0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &818262045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4049984819226766675, guid: 10b6b49740f805346a702e5607e37250, type: 3}
@@ -397,6 +410,11 @@ MonoBehaviour:
   backLeft: 0
   fadeSpeed: 0
   playerNoticed: 0
+--- !u!1 &1144115336 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1899736253423498000, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+  m_PrefabInstance: {fileID: 1899736254672639732}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1159176536
 GameObject:
   m_ObjectHideFlags: 0
@@ -5639,6 +5657,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194229}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: mSpawn
+      value: 
+      objectReference: {fileID: 252647549}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1668685215}
@@ -6051,17 +6073,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4933524828837046244}
     - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
+      propertyPath: fishScript
+      value: 
+      objectReference: {fileID: 595806612}
+    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
+      propertyPath: pilkkivapa
+      value: 
+      objectReference: {fileID: 1144115336}
+    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
       propertyPath: slotHolder
       value: 
       objectReference: {fileID: 573420129}
     - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
+      propertyPath: monsterSpawn
+      value: 
+      objectReference: {fileID: 252647549}
+    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
+      propertyPath: spawnManager
+      value: 
+      objectReference: {fileID: 252647547}
+    - target: {fileID: 4142778019846092835, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
       propertyPath: inventoryPanel
       value: 
       objectReference: {fileID: 1017586164}
-    - target: {fileID: 4971792266675205675, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
 --- !u!1001 &4159852614882691021

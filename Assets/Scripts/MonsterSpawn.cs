@@ -13,6 +13,8 @@ public class MonsterSpawn : MonoBehaviour
     private markoscript markoScript;
     public GameOver go;
 
+    
+
     public bool canSpawnKakkonen = false;
     public bool canSpawnMarko = false;
 
@@ -36,7 +38,20 @@ public class MonsterSpawn : MonoBehaviour
 
         if (nextSpawn == 45) //15 -> 45
         {
-            canSpawnKakkonen = true;
+            if (GlobalGameState.instance.progression == 1)
+            {
+                canSpawnMarko = true;
+            }
+            if (GlobalGameState.instance.progression == 2)
+            {
+                KakkonenTaiMarko();
+                
+            }
+            if (GlobalGameState.instance.progression == 0)
+            {
+                nextSpawn = 0;
+                Debug.Log("not spawning anyone");
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.K))
@@ -56,6 +71,10 @@ public class MonsterSpawn : MonoBehaviour
         if (canSpawnKakkonen)
         {
             SpawnKakkonen();
+        }
+        if (canSpawnMarko)
+        {
+            SpawnMarko();
         }
     }
 
@@ -84,13 +103,15 @@ public class MonsterSpawn : MonoBehaviour
     }
 
 
-    void KakkonenOrMarko()
+    void KakkonenTaiMarko()
     {
         int i = Random.Range(0, 2);
         if (i == 1)
         {
             Debug.Log("marko");
+            canSpawnMarko = true;
         }
         else Debug.Log("kakkonen");
+        canSpawnKakkonen = true;
     }
 }

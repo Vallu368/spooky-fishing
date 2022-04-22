@@ -285,7 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200e4cd44fabe8b4d83452c05696ea0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mSpawn: {fileID: 0}
   fishes:
   - {fileID: 11400000, guid: 49afa48a1c4c0d944bff66d57d0538cb, type: 2}
   - {fileID: 11400000, guid: 7349a3aa866a96c41a58a657192dc1dd, type: 2}
@@ -296,12 +295,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
   checkpoint1: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
+  checkpoint2: {fileID: 0}
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0
   inventory: {fileID: 0}
-  totalFishCaught: 0
-  totalFishForCheckpoint1: 1
+  totalFishForCheckpoint1: 0
+  totalFishForCheckpoint2: 2
   animator: {fileID: 1899736254477189218}
 --- !u!95 &1899736254477189218
 Animator:
