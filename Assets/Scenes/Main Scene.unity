@@ -173,8 +173,6 @@ MonoBehaviour:
   - {fileID: 1451127749}
   nextSpawn: 0
   go: {fileID: 0}
-  markoActive: 0
-  kakkonenActive: 0
   canSpawnKakkonen: 0
   canSpawnMarko: 0
   index: 0
@@ -5668,6 +5666,10 @@ PrefabInstance:
       propertyPath: checkpoint1
       value: 
       objectReference: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2
+      value: 
+      objectReference: {fileID: 11400000, guid: 49afa48a1c4c0d944bff66d57d0538cb, type: 2}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: fishes.Array.size
       value: 8
