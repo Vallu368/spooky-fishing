@@ -5,6 +5,7 @@ using UnityEngine;
 public class markoscript : MonoBehaviour
 {
 	[SerializeField] GameObject themHands;
+	[SerializeField] GameObject skin;
 
 	private bool isPlayerAlive = true;
 	public CameraMovement cam;
@@ -82,8 +83,9 @@ public class markoscript : MonoBehaviour
 	{
 		if (isPlayerAlive)
 		{
+			skin.SetActive(false);
 			themHands.SetActive(true);
-			yield return new WaitForSeconds(1.5f);
+			yield return new WaitForSeconds(0.95f);
 			isPlayerAlive = false;
 			gameOverScript.GameEnded();
 			gameOverScreen.SetActive(true);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsteriKakkonen : MonoBehaviour
 {
     [SerializeField] GameObject themHands;
+    [SerializeField] GameObject skin;
 
     public CameraMovement cam;
     public GameObject kakkonen;
@@ -80,6 +81,7 @@ public class MonsteriKakkonen : MonoBehaviour
 	{
 		if(isPlayerAlive)
 		{
+            skin.SetActive(false);
             themHands.SetActive(true);
             yield return new WaitForSeconds(1.5f);
             isPlayerAlive = false;
