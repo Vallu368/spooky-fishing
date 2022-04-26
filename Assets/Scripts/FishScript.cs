@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FishScript : MonoBehaviour
 {
-    public FishableItem[] fishes;
+    public List<FishableItem> fishes;
     public FishableItem checkpoint1;
     public FishableItem checkpoint2;
     public int i = 0;
@@ -15,10 +15,15 @@ public class FishScript : MonoBehaviour
     public int totalFishForCheckpoint2 = 2;
     public Animator animator;
     private GameObject test; //kala jonka se spawnaa menee tähän että sen voi poistaa
+    public bool repeat;
+    public int spawnedFishIndex = 0;
+    public int count = 0;
 
 
     private void Update()
     {
+        count = fishes.Count;
+        
         if (fishing.caughtFish)
         {
             gameObject.SetActive(true);
@@ -28,8 +33,20 @@ public class FishScript : MonoBehaviour
     }
     public void SpawnRandomPrefab()
     {
-        index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
+        index = Random.Range(0, count);
+        //valitsee randomi kalan
         var fish = Instantiate(fishes[index].prefab, this.transform); // spawnaa kalan
+        repeat = fishes[index].canSpawnMultipleTimes;
+        if (repeat)
+        {
+            Debug.Log("its a normal fish :D");
+        }
+
+        if (!repeat)
+        {
+            Debug.Log("oh no spooky");
+        }
+        spawnedFishIndex = index;
         test = fish;
         
 
@@ -42,6 +59,7 @@ public class FishScript : MonoBehaviour
     {
         var fish = Instantiate(checkpoint1.prefab, this.transform);
         test = fish;
+
 
     }
 
@@ -63,6 +81,12 @@ public class FishScript : MonoBehaviour
         animator.Play("fish up");
         inventory.RefreshUI();
         inventory.Add(fishes[index]);
+        if (!repeat)
+        {
+            fishes.Remove(fishes[spawnedFishIndex]);
+            Debug.Log("removed " +  fishes[spawnedFishIndex].itemName);
+        }
+
     }
     public void CaughtCheckpoint1Fish()
     {

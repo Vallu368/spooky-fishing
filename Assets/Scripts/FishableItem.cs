@@ -5,6 +5,7 @@ public class FishableItem : ItemClass
 {
     public ItemType itemType;
     public GameObject prefab;
+    public bool canSpawnMultipleTimes; //pinguDab
     public enum ItemType
     {
         fish,

@@ -76,7 +76,7 @@ public class Fishing : MonoBehaviour
         if (catchFishTimer >= 10) //jos et paina space menetät kalan
         {
             MissedFish();
-            anim_vapa.SetBool("VapaStartFishing", false);
+            anim_vapa.SetBool("VapaStartFishing", true);
         }
 
 
@@ -123,7 +123,7 @@ public class Fishing : MonoBehaviour
             }
             if (randomNumber)
             {
-                i = Random.Range(0, 50);  //aluksi kattoo 0 - 50 numeroista
+                i = Random.Range(0, 10);  //aluksi kattoo 0 - 50 numeroista
             }
 
             if (wait >= 40 && randomNumber)
