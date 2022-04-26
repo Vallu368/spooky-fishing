@@ -113,7 +113,7 @@ public class Fishing : MonoBehaviour
 
             bool randomNumber = false; 
             
-            if (wait >= 10)
+            if (wait >= 1)
             {
                 randomNumber = true; //kun on oottanut 10 sekunttia pysty alkaan saamaan kalaa
             }
@@ -163,6 +163,7 @@ public class Fishing : MonoBehaviour
 
         void CatchFish()
         {
+            fishScript.DestroyFish();
             anim.SetBool("stoppedFishing", true);
             anim.SetBool("startedFishing", false);
             anim.SetBool("caughtFish", false);
@@ -188,6 +189,7 @@ public class Fishing : MonoBehaviour
         }
         void MissedFish()
         {
+            fishScript.DestroyFish();
             anim.SetBool("stoppedFishing", true);
             anim.SetBool("startedFishing", false);
             Debug.Log("missed fish!");

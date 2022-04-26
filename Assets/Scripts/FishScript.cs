@@ -14,6 +14,7 @@ public class FishScript : MonoBehaviour
     public int totalFishForCheckpoint1 = 1;
     public int totalFishForCheckpoint2 = 2;
     public Animator animator;
+    private GameObject test; //kala jonka se spawnaa menee tähän että sen voi poistaa
 
 
     private void Update()
@@ -29,26 +30,32 @@ public class FishScript : MonoBehaviour
     {
         index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
         var fish = Instantiate(fishes[index].prefab, this.transform); // spawnaa kalan
-        Destroy(fish, 3);
+        test = fish;
+        
 
+    }
+    public void DestroyFish()
+    {
+        Destroy(test, 3);
     }
     public void SpawnCheckpoint1()
     {
         var fish = Instantiate(checkpoint1.prefab, this.transform);
-        Destroy(fish, 4);
-        
+        test = fish;
+
     }
 
     public void SpawnCheckpoint2()
     {
         var fish = Instantiate(checkpoint2.prefab, this.transform);
-        Destroy(fish, 3);
+        test = fish;
     }
 
     public void SetGameObjectActive()
     {
         gameObject.SetActive(true);
     }
+
 
     public void CaughtFish()
     {
