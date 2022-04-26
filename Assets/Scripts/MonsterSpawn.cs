@@ -56,10 +56,15 @@ public class MonsterSpawn : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            nextSpawn = 45;
+            SpawnKakkonen();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SpawnMarko();
         }
 
-        
+
+
     }
     void UpdateEverySecond()
     {
