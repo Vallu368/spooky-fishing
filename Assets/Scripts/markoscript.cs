@@ -6,6 +6,7 @@ public class markoscript : MonoBehaviour
 {
 	[SerializeField] GameObject themHands;
 	[SerializeField] GameObject skin;
+	[SerializeField] AudioClip markoGotU;
 
 	private bool isPlayerAlive = true;
 	public CameraMovement cam;
@@ -83,10 +84,11 @@ public class markoscript : MonoBehaviour
 	{
 		if (isPlayerAlive)
 		{
+			AudioSource.PlayClipAtPoint(markoGotU, Camera.main.transform.position);
 			skin.SetActive(false);
 			themHands.SetActive(true);
-			yield return new WaitForSeconds(0.95f);
 			isPlayerAlive = false;
+			yield return new WaitForSeconds(0.95f);
 			gameOverScript.GameEnded();
 			gameOverScreen.SetActive(true);
 			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
