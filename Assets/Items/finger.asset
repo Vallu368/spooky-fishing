@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Finger
   itemIcon: {fileID: 21300000, guid: 96008685e9651c2429a2cc743f98efc0, type: 3}
-  description: I wonder how much that ring would make.
+  description: I hope the rest of the body is living somewhere.
   itemType: 0
   prefab: {fileID: 5843866740118637486, guid: 5773eb96ec954a140b039c3e9e954add, type: 3}

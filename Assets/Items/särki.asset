@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "s\xE4rki"
   itemIcon: {fileID: 21300000, guid: d578505f847ba4040927b552e7482212, type: 3}
-  itemID: 0
-  description: babyshark dudududuu
+  description: Best bait for a roach are maggots and bloodworms.
   itemType: 0
   prefab: {fileID: 3710648857181036066, guid: 784342e093cf8e04782b37fac7913da3, type: 3}

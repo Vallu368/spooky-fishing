@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b75b19191e62f459a289fcb29477d2, type: 3}
   m_Name: testi
   m_EditorClassIdentifier: 
-  itemName: 
-  itemIcon: {fileID: 0}
-  description: 
+  itemName: testi
+  itemIcon: {fileID: 21300000, guid: 434838376ba80a343825df6518cb74e6, type: 3}
+  description: lolololl
   itemType: 0
   prefab: {fileID: 0}
