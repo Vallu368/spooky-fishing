@@ -6,6 +6,7 @@ public class MonsteriKakkonen : MonoBehaviour
 {
     [SerializeField] GameObject themHands;
     [SerializeField] GameObject skin;
+    [SerializeField] AudioClip kakkonenGotU;
 
     public CameraMovement cam;
     public GameObject kakkonen;
@@ -81,10 +82,11 @@ public class MonsteriKakkonen : MonoBehaviour
 	{
 		if(isPlayerAlive)
 		{
+            AudioSource.PlayClipAtPoint(kakkonenGotU, Camera.main.transform.position);
             skin.SetActive(false);
             themHands.SetActive(true);
-            yield return new WaitForSeconds(1.5f);
             isPlayerAlive = false;
+            yield return new WaitForSeconds(1.5f);
 			gameOverScript.GameEnded();
 			gameOverScreen.SetActive(true);
 			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
@@ -174,7 +176,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookBackRight) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
-            PlayerDies();
+            StartCoroutine(PlayerDies());
             Debug.Log("you died oof ouch");
         }
         if (cam.lookBackRight && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
