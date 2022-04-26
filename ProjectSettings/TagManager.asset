@@ -10,6 +10,7 @@ TagManager:
   - backLeft
   - backRight
   - PlayerLight
+  - hands
   layers:
   - Default
   - TransparentFX

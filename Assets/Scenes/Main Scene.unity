@@ -396,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108dea1c97616734aa8ad45ab4ee0f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  themHands: {fileID: 0}
   cam: {fileID: 963194229}
   kakkonen: {fileID: 1098295510}
   gameOverScreen: {fileID: 818262045}
@@ -508,6 +509,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1227127929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4971792266675205675, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
+  m_PrefabInstance: {fileID: 4142778018287248828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1380545005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4142778020221370663, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
@@ -6007,6 +6013,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
+      propertyPath: themHands
+      value: 
+      objectReference: {fileID: 1227127929}
+    - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1065810311}
@@ -6167,6 +6177,10 @@ PrefabInstance:
       propertyPath: inventoryPanel
       value: 
       objectReference: {fileID: 1017586164}
+    - target: {fileID: 4971792266675205675, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
+      propertyPath: m_TagString
+      value: hands
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d58c9a13ed58884fb423cfcb46967a4, type: 3}
 --- !u!1001 &4159852614882691021
@@ -6281,6 +6295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MarkoSkin
       objectReference: {fileID: 0}
+    - target: {fileID: 9210733796618967770, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: cam
       value: 
@@ -6289,6 +6307,10 @@ PrefabInstance:
       propertyPath: theLight
       value: 
       objectReference: {fileID: 1380545005}
+    - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
+      propertyPath: themHands
+      value: 
+      objectReference: {fileID: 1227127929}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: gameOverCanvas
       value: 

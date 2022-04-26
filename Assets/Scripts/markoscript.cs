@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class markoscript : MonoBehaviour
 {
+	[SerializeField] GameObject themHands;
+
 	private bool isPlayerAlive = true;
 	public CameraMovement cam;
 	public GameObject Marko;
@@ -28,7 +30,6 @@ public class markoscript : MonoBehaviour
 	{
 		gameOverScript = gameOverCanvas.GetComponent<GameOver>();
 		playerLight = GameObject.FindGameObjectWithTag("PlayerLight").GetComponent<lightF>(); //Find player light's script on Start to detect if flashlight is on
-
 	}
 
 
@@ -77,10 +78,12 @@ public class markoscript : MonoBehaviour
 		}
 	}
 
-	private void PlayerDies()
+	IEnumerator PlayerDies()
 	{
 		if (isPlayerAlive)
 		{
+			themHands.SetActive(true);
+			yield return new WaitForSeconds(1.5f);
 			isPlayerAlive = false;
 			gameOverScript.GameEnded();
 			gameOverScreen.SetActive(true);
@@ -105,10 +108,10 @@ public class markoscript : MonoBehaviour
 
 		if (playerNoticed && cam.lookLeft && cam.time == 2)         //jos pelaaja on huomattu ja katotaan monsteria p�in 2sek niin kuollaan
 		{
-			PlayerDies();
+			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookLeft && !playerLight.flashlightActive) //Timer removed
+		if (!cam.lookLeft && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 					//jos k��ntyy pois monsterista ja valot on pois p��lt� pari sekkaa niin monsteri katoaa
 		{
 			FadeOut();
@@ -124,10 +127,10 @@ public class markoscript : MonoBehaviour
 
 		if (playerNoticed && cam.lookRight && cam.time == 2)
 		{
-			PlayerDies();
+			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookRight && !playerLight.flashlightActive) //Timer removed
+		if (!cam.lookRight && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();
@@ -143,10 +146,10 @@ public class markoscript : MonoBehaviour
 
 		if (playerNoticed && cam.lookForward && cam.time == 2)
 		{
-			PlayerDies();
+			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookForward && !playerLight.flashlightActive) //Timer removed
+		if (!cam.lookForward && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();
@@ -162,10 +165,10 @@ public class markoscript : MonoBehaviour
 
 		if (playerNoticed && cam.lookBackLeft && cam.time == 2)
 		{
-			PlayerDies();
+			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookBackLeft && !playerLight.flashlightActive) //Timer removed
+		if (!cam.lookBackLeft && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();
@@ -181,10 +184,10 @@ public class markoscript : MonoBehaviour
 
 		if (playerNoticed && cam.lookBackRight && cam.time == 2)
 		{
-			PlayerDies();
+			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookBackRight && !playerLight.flashlightActive) //Timer removed
+		if (!cam.lookBackRight && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();

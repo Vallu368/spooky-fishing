@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MonsteriKakkonen : MonoBehaviour
 {
+    [SerializeField] GameObject themHands;
+
     public CameraMovement cam;
     public GameObject kakkonen;
     public GameObject gameOverScreen;
@@ -74,11 +76,13 @@ public class MonsteriKakkonen : MonoBehaviour
         }
     }
 
-	private void PlayerDies()
+	IEnumerator PlayerDies()
 	{
 		if(isPlayerAlive)
 		{
-			isPlayerAlive = false;
+            themHands.SetActive(true);
+            yield return new WaitForSeconds(1.5f);
+            isPlayerAlive = false;
 			gameOverScript.GameEnded();
 			gameOverScreen.SetActive(true);
 			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
@@ -100,7 +104,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookLeft) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
-            PlayerDies();
+            StartCoroutine(PlayerDies());
         }
         if (cam.lookLeft && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
@@ -117,7 +121,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookRight) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
-            PlayerDies();
+            StartCoroutine(PlayerDies());
         }
         if (cam.lookRight && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
@@ -134,7 +138,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookForward) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
-            PlayerDies();
+            StartCoroutine(PlayerDies());
         }
         if (cam.lookForward && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
@@ -151,7 +155,7 @@ public class MonsteriKakkonen : MonoBehaviour
         }
         if (playerNoticed && !cam.lookBackLeft) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
-            PlayerDies();
+            StartCoroutine(PlayerDies());
         }
         if (cam.lookBackLeft && cam.time == 3) //playeri kattoi monsteria tarpeeksi kauan
         {
