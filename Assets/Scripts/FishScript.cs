@@ -29,24 +29,19 @@ public class FishScript : MonoBehaviour
     {
         index = Random.Range(0, fishes.Length);  //valitsee randomi kalan
         var fish = Instantiate(fishes[index].prefab, this.transform); // spawnaa kalan
-        Debug.Log("spawned " + fishes[index].itemName);
         Destroy(fish, 3);
 
     }
     public void SpawnCheckpoint1()
     {
-        Debug.Log("checkpoint 1");
         var fish = Instantiate(checkpoint1.prefab, this.transform);
-        Debug.Log("spawned " + checkpoint1.itemName);
         Destroy(fish, 4);
         
     }
 
     public void SpawnCheckpoint2()
     {
-        Debug.Log("checkpoint 2");
         var fish = Instantiate(checkpoint2.prefab, this.transform);
-        Debug.Log("spawned " + checkpoint2.itemName);
         Destroy(fish, 3);
     }
 

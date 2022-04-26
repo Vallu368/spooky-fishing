@@ -192,6 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899736253423498001}
   - component: {fileID: 1899736253423498002}
+  - component: {fileID: 1144115338}
   m_Layer: 0
   m_Name: Pilkkivapa
   m_TagString: Untagged
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1899736254184880290}
+  anim_vapa: {fileID: 1144115338}
   isFishing: 0
   waitingForFish: 0
   gotFish: 0
@@ -241,6 +243,25 @@ MonoBehaviour:
   cameraMovement: {fileID: 0}
   fish: {fileID: 1899736254477189223}
   fishScript: {fileID: 1899736254477189216}
+--- !u!95 &1144115338
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899736253423498000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eac1e2a67531e1244b701819421a1d99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1899736254477189223
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,8 +315,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
   - {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
-  checkpoint1: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
-  checkpoint2: {fileID: 0}
+  checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+  checkpoint2: {fileID: 11400000, guid: 49afa48a1c4c0d944bff66d57d0538cb, type: 2}
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0

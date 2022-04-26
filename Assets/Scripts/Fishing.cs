@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fishing : MonoBehaviour
 {
     public Animator anim;
+    public Animator anim_vapa;
 
     public bool isFishing = false;
     public bool waitingForFish = false;
@@ -33,6 +34,10 @@ public class Fishing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gotFish)
+        {
+            anim_vapa.SetBool("VapaCaughtFish", false);
+        }
 
         if (Time.time >= nextUpdate)
         {
@@ -82,6 +87,7 @@ public class Fishing : MonoBehaviour
             if (gotFish) //aloittaa ajastimen kalan menettämiseen
             {
                 catchFishTimer++;
+                anim_vapa.SetBool("VapaCaughtFish", true);
             }
 
             if (finishedFishing == true) //kun kalastus loppuu timeri menee vähän aikaa ennenku voit alottaa uudestaan että se ei ota tuota start fishing inputtia kun otat sen kiinni
