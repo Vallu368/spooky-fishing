@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class lightF : MonoBehaviour
 {
+	[SerializeField] AudioClip clickingTheFL;
 	Light flashLight;
 	public bool flashlightActive = true;
 	void Start()
@@ -16,6 +17,7 @@ public class lightF : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.F))
 		{
+			AudioSource.PlayClipAtPoint(clickingTheFL, Camera.main.transform.position);
 			if (flashlightActive == false)
 			{
 				flashlightActive = true;
