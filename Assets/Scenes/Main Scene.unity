@@ -374,6 +374,7 @@ MonoBehaviour:
   - {fileID: 1727488786}
   - {fileID: 74497164}
   nextSpawn: 0
+  nextSpawnTimer: 45
   go: {fileID: 0}
   canSpawnKakkonen: 0
   canSpawnMarko: 0
