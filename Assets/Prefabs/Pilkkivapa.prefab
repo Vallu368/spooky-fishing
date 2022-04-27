@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef768e6e8fc76b546af5bf63285aa61e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siimanKelaus: {fileID: 8300000, guid: b2e0dbead05896b48aad26df663c5641, type: 3}
+  siimanKelaus: {fileID: 8300000, guid: 82fea5e8922037f409856838bdf646fa, type: 3}
   splashSound: {fileID: 8300000, guid: db1366e187088cc4186047899b84db4b, type: 3}
   anim: {fileID: 1899736254184880290}
   anim_vapa: {fileID: 1144115338}
