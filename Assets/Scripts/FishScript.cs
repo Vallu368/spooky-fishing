@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class FishScript : MonoBehaviour
 {
-
-    [SerializeField] AudioClip secondBG;
-
     public List<FishableItem> fishes;
     public FishableItem checkpoint1;
     public FishableItem checkpoint2;
@@ -21,7 +18,6 @@ public class FishScript : MonoBehaviour
     public bool repeat;
     public int spawnedFishIndex = 0;
     public int count = 0;
-
 
     private void Update()
     {
@@ -100,7 +96,6 @@ public class FishScript : MonoBehaviour
     }
     public void CaughtCheckpoint2Fish()
     {
-        AudioSource.PlayClipAtPoint(secondBG, Camera.main.transform.position);
         GlobalGameState.instance.totalFishCaught++;
         animator.Play("fish up");
         inventory.RefreshUI();
