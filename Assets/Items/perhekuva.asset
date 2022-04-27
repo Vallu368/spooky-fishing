@@ -17,3 +17,4 @@ MonoBehaviour:
   description: I wonder if they too ewere here to catch the little Star...
   itemType: 1
   prefab: {fileID: 7278486642372133525, guid: 30287ebf136853148a2e1ff0010a2549, type: 3}
+  canSpawnMultipleTimes: 0

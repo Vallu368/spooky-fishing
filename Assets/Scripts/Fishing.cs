@@ -73,7 +73,7 @@ public class Fishing : MonoBehaviour
             CatchFish();
             anim_vapa.SetBool("VapaStartFishing", false);
         }
-        if (catchFishTimer >= 10) //jos et paina space menetät kalan
+        if (catchFishTimer >= 15) //jos et paina space menetät kalan
         {
             MissedFish();
             anim_vapa.SetBool("VapaStartFishing", true);
@@ -117,13 +117,13 @@ public class Fishing : MonoBehaviour
 
             bool randomNumber = false; 
             
-            if (wait >= 10)
+            if (wait >= 5)
             {
-                randomNumber = true; //kun on oottanut 10 sekunttia pysty alkaan saamaan kalaa
+                randomNumber = true; //kun on oottanut 55 sekunttia pysty alkaan saamaan kalaa
             }
             if (randomNumber)
             {
-                i = Random.Range(0, 10);  //aluksi kattoo 0 - 50 numeroista
+                i = Random.Range(0, 50);  //aluksi kattoo 0 - 50 numeroista
             }
 
             if (wait >= 40 && randomNumber)

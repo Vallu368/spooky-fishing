@@ -17,3 +17,4 @@ MonoBehaviour:
   description: Staring. Got it.
   itemType: 0
   prefab: {fileID: 222513561611430347, guid: be719bf70d7c0a64faafd89e633272fc, type: 3}
+  canSpawnMultipleTimes: 0
