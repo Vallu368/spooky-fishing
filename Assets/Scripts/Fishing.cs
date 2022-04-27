@@ -123,10 +123,10 @@ public class Fishing : MonoBehaviour
             }
             if (randomNumber)
             {
-                i = Random.Range(0, 50);  //aluksi kattoo 0 - 50 numeroista
+                i = Random.Range(0, 40);  //aluksi kattoo 0 - 50 numeroista
             }
 
-            if (wait >= 40 && randomNumber)
+            if (wait >= 20 && randomNumber)
             {
                 i = Random.Range(0, 5); //jos menee yli 40s niin 0 - 5
             }
