@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Fishing : MonoBehaviour
 {
+    [SerializeField] AudioClip siimanKelaus;
+    [SerializeField] AudioClip splashSound;
+
     public Animator anim;
     public Animator anim_vapa;
 
@@ -60,6 +63,8 @@ public class Fishing : MonoBehaviour
         {
             Debug.Log("started fishing"!);
             anim_vapa.SetBool("VapaStartFishing", true);
+            AudioSource.PlayClipAtPoint(siimanKelaus, Camera.main.transform.position);
+            
             
             anim.SetBool("startedFishing", true);
             anim.SetBool("stoppedFishing", false);
@@ -71,6 +76,7 @@ public class Fishing : MonoBehaviour
         if (Input.GetKey("space") && gotFish && cameraMovement.lookDown) //ottaa kalan kiinni
         {
             CatchFish();
+            AudioSource.PlayClipAtPoint(siimanKelaus, Camera.main.transform.position);
             anim_vapa.SetBool("VapaStartFishing", false);
         }
         if (catchFishTimer >= 15) //jos et paina space menetät kalan
@@ -90,6 +96,7 @@ public class Fishing : MonoBehaviour
             }
             if (gotFish) //aloittaa ajastimen kalan menettämiseen
             {
+                AudioSource.PlayClipAtPoint(splashSound, Camera.main.transform.position);
                 catchFishTimer++;
                 anim_vapa.SetBool("VapaCaughtFish", true);
             }

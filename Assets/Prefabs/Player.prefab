@@ -1000,6 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74f48b40baf2814b84f4f26199e8e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickingTheFL: {fileID: 8300000, guid: a45f97087d8db2141bdafc543a4fed5b, type: 3}
   flashlightActive: 1
 --- !u!1 &4142778020348094609
 GameObject:
@@ -1290,6 +1291,10 @@ PrefabInstance:
     - target: {fileID: 4213850359621590459, guid: 99c730c667ae2c54aa84b3c3ca0e41af, type: 3}
       propertyPath: m_Name
       value: MarkoHali
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213850359621590459, guid: 99c730c667ae2c54aa84b3c3ca0e41af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6354508264729837939, guid: 99c730c667ae2c54aa84b3c3ca0e41af, type: 3}
       propertyPath: m_RootOrder

@@ -9,6 +9,7 @@ public class MonsterSpawn : MonoBehaviour
     public GameObject[] spawnPoints;
     private int nextUpdate = 1;
     public int nextSpawn = 0;
+    public int nextSpawnTimer = 45;
     private MonsteriKakkonen kakkonenScript;
     private markoscript markoScript;
     public GameOver go;
@@ -27,6 +28,10 @@ public class MonsterSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GlobalGameState.instance.progression == 2)
+        {
+            nextSpawnTimer = 35;
+        }
         if (Time.time >= nextUpdate)
         {
 
@@ -36,7 +41,7 @@ public class MonsterSpawn : MonoBehaviour
 
         index = Random.Range(0, spawnPoints.Length);
 
-        if (nextSpawn == 45) //15 -> 45
+        if (nextSpawn == nextSpawnTimer) //15 -> 45
         {
             if (GlobalGameState.instance.progression == 1)
             {

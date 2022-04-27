@@ -130,15 +130,16 @@ public class FishScript : MonoBehaviour
         }
         if (!repeat)
         {
+            Debug.Log("removing item");
             if (GlobalGameState.instance.progression == 1)
             {
-                checkpoint1Fishes.Remove(fishes[spawnedFishIndex]);
-                Debug.Log("removed " + fishes[spawnedFishIndex].itemName);
+                checkpoint1Fishes.Remove(checkpoint1Fishes[spawnedFishIndex]);
+                Debug.Log("removed " + checkpoint1Fishes[spawnedFishIndex].itemName);
             }
             if (GlobalGameState.instance.progression == 2)
             {
-                checkpoint2Fishes.Remove(fishes[spawnedFishIndex]);
-                Debug.Log("removed " + fishes[spawnedFishIndex].itemName);
+                checkpoint2Fishes.Remove(checkpoint2Fishes[spawnedFishIndex]);
+                Debug.Log("removed " + checkpoint2Fishes[spawnedFishIndex].itemName);
             }
         }
 
