@@ -415,7 +415,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
   checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
-  masterFish: {fileID: 0}
+  masterFish: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
   HowManyFishesToEnd: 0
   i: 0
   fishing: {fileID: 1899736253423498002}
