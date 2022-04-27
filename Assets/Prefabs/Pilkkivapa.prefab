@@ -311,8 +311,13 @@ MonoBehaviour:
   checkpoint1Fishes:
   - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
+  checkpoint2Fishes:
+  - {fileID: 11400000, guid: c370e96296ced664faba851753b59637, type: 2}
+  - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
   checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
+  masterFish: {fileID: 0}
+  HowManyFishesToEnd: 0
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0

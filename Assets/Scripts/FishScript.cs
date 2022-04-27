@@ -8,8 +8,11 @@ public class FishScript : MonoBehaviour
 
     public List<FishableItem> fishes;
     public List<FishableItem> checkpoint1Fishes;
+    public List<FishableItem> checkpoint2Fishes;
     public FishableItem checkpoint1;
     public FishableItem checkpoint2;
+    public FishableItem masterFish;
+    public int HowManyFishesToEnd;
     public int i = 0;
     public Fishing fishing;
     public int index = 0;
@@ -56,6 +59,24 @@ public class FishScript : MonoBehaviour
             test = fish;
             spawnedFishIndex = index;
         }
+        if (GlobalGameState.instance.progression == 2)
+        {
+            if (GlobalGameState.instance.totalFishCaught == HowManyFishesToEnd)
+            {
+                var fish = Instantiate(masterFish.prefab, this.transform);
+                test = fish;
+                
+            }
+            else
+            {
+                index = Random.Range(0, count2);
+                //valitsee randomi kalan
+                var fish = Instantiate(checkpoint2Fishes[index].prefab, this.transform); // spawnaa kalan
+                repeat = checkpoint2Fishes[index].canSpawnMultipleTimes;
+                test = fish;
+                spawnedFishIndex = index;
+            }
+        }
         if (repeat)
         {
             Debug.Log("its a normal fish :D");
@@ -99,7 +120,14 @@ public class FishScript : MonoBehaviour
         GlobalGameState.instance.totalFishCaught++;
         animator.Play("fish up");
         inventory.RefreshUI();
-        inventory.Add(fishes[index]);
+        if (GlobalGameState.instance.progression == 0)
+        {
+            inventory.Add(fishes[index]);
+        }
+        if (GlobalGameState.instance.progression == 1)
+        {
+            inventory.Add(checkpoint1Fishes[index]);
+        }
         if (!repeat)
         {
             if (GlobalGameState.instance.progression == 1)
@@ -109,7 +137,8 @@ public class FishScript : MonoBehaviour
             }
             if (GlobalGameState.instance.progression == 2)
             {
-                
+                checkpoint2Fishes.Remove(fishes[spawnedFishIndex]);
+                Debug.Log("removed " + fishes[spawnedFishIndex].itemName);
             }
         }
 

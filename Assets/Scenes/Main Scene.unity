@@ -6231,6 +6231,18 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1668685215}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c370e96296ced664faba851753b59637, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
 --- !u!1001 &2277701935451606653
@@ -6423,7 +6435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2280145709846060246, guid: 10b6b49740f805346a702e5607e37250, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2280145709873137636, guid: 10b6b49740f805346a702e5607e37250, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
