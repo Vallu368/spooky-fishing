@@ -82,7 +82,7 @@ public class MonsteriKakkonen : MonoBehaviour
 	{
 		if(isPlayerAlive)
 		{
-            AudioSource.PlayClipAtPoint(kakkonenGotU, Camera.main.transform.position);
+            SFX.instance.PlayClip(kakkonenGotU, 1f);
             skin.SetActive(false);
             themHands.SetActive(true);
             isPlayerAlive = false;

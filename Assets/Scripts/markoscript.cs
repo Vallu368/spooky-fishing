@@ -84,7 +84,7 @@ public class markoscript : MonoBehaviour
 	{
 		if (isPlayerAlive)
 		{
-			AudioSource.PlayClipAtPoint(markoGotU, Camera.main.transform.position);
+			SFX.instance.PlayClip(markoGotU, 1f);
 			skin.SetActive(false);
 			themHands.SetActive(true);
 			isPlayerAlive = false;

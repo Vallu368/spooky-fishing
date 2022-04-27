@@ -63,7 +63,7 @@ public class Fishing : MonoBehaviour
         {
             Debug.Log("started fishing"!);
             anim_vapa.SetBool("VapaStartFishing", true);
-            AudioSource.PlayClipAtPoint(siimanKelaus, Camera.main.transform.position);
+            SFX.instance.PlayClip(siimanKelaus, 1f);
             
             
             anim.SetBool("startedFishing", true);
@@ -76,7 +76,7 @@ public class Fishing : MonoBehaviour
         if (Input.GetKey("space") && gotFish && cameraMovement.lookDown) //ottaa kalan kiinni
         {
             CatchFish();
-            AudioSource.PlayClipAtPoint(siimanKelaus, Camera.main.transform.position);
+            SFX.instance.PlayClip(siimanKelaus, 1f);
             anim_vapa.SetBool("VapaStartFishing", false);
         }
         if (catchFishTimer >= 15) //jos et paina space menetät kalan
@@ -96,7 +96,7 @@ public class Fishing : MonoBehaviour
             }
             if (gotFish) //aloittaa ajastimen kalan menettämiseen
             {
-                AudioSource.PlayClipAtPoint(splashSound, Camera.main.transform.position);
+                SFX.instance.PlayClip(splashSound, 1f);
                 catchFishTimer++;
                 anim_vapa.SetBool("VapaCaughtFish", true);
             }

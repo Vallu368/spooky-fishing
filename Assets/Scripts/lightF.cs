@@ -17,7 +17,7 @@ public class lightF : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-			AudioSource.PlayClipAtPoint(clickingTheFL, Camera.main.transform.position);
+			SFX.instance.PlayClip(clickingTheFL, 1f);
 			if (flashlightActive == false)
 			{
 				flashlightActive = true;
