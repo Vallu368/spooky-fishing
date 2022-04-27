@@ -307,20 +307,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishes:
+  - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
+  checkpoint1Fishes:
   - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
-  checkpoint1: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
-  checkpoint2: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+  checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+  checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0
   inventory: {fileID: 0}
-  totalFishForCheckpoint1: 5
+  totalFishForCheckpoint1: 2
   totalFishForCheckpoint2: 6
   animator: {fileID: 1899736254477189218}
   repeat: 0
   spawnedFishIndex: 0
-  count: 0
+  count1: 0
+  count2: 0
 --- !u!95 &1899736254477189218
 Animator:
   serializedVersion: 3
