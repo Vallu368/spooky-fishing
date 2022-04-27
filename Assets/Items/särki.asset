@@ -16,4 +16,5 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: d578505f847ba4040927b552e7482212, type: 3}
   description: Best bait for a roach are maggots and bloodworms.
   itemType: 0
-  prefab: {fileID: 3710648857181036066, guid: 784342e093cf8e04782b37fac7913da3, type: 3}
+  prefab: {fileID: 4866246833647147355, guid: 8c43acebb010ec9418d81334c735d59c, type: 3}
+  canSpawnMultipleTimes: 1

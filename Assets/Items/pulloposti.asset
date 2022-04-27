@@ -17,3 +17,4 @@ MonoBehaviour:
   description: '''Turned away and closed my light'', huh. Creepy.'
   itemType: 1
   prefab: {fileID: 4125770701774784466, guid: 2136bd621e06a0c488600f28a2c1dd03, type: 3}
+  canSpawnMultipleTimes: 0

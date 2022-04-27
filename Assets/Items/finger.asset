@@ -17,3 +17,4 @@ MonoBehaviour:
   description: I hope the rest of the body is living somewhere.
   itemType: 0
   prefab: {fileID: 5843866740118637486, guid: 5773eb96ec954a140b039c3e9e954add, type: 3}
+  canSpawnMultipleTimes: 0
