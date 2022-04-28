@@ -1440,8 +1440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 8.324, y: -11}
-  m_SizeDelta: {x: 465.0615, y: 150.4189}
+  m_AnchoredPosition: {x: 16.0213, y: -11}
+  m_SizeDelta: {x: 480.4561, y: 222.5816}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7556459286805759300
 CanvasRenderer:
@@ -1487,11 +1487,14 @@ MonoBehaviour:
   m_Text: 'Press WASD to look around
 
 
-    Press Space to fish
+    Press F to turn the flashlight on/off
 
 
-    Press I to open
-    the inventory
+    Press
+    Space to fish
+
+
+    Press I to open the inventory
 
 
 '
