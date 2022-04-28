@@ -155,7 +155,7 @@ public class FishScript : MonoBehaviour
     {        GlobalGameState.instance.totalFishCaught++;
         animator.Play("fish up");
         inventory.RefreshUI();
-        inventory.Add(checkpoint1);
+        inventory.Add(checkpoint2);
 
     }
 }

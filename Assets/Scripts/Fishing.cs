@@ -53,7 +53,7 @@ public class Fishing : MonoBehaviour
         {
             checkpointFish = 1;
         }
-        else if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint2)
+        else if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint2 && GlobalGameState.instance.progression == 1)
         {
             checkpointFish = 2;
         }

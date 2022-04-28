@@ -9,10 +9,12 @@ public class MonsterSpawn : MonoBehaviour
     public GameObject[] spawnPoints;
     private int nextUpdate = 1;
     public int nextSpawn = 0;
-    public int nextSpawnTimer = 45;
+    public int nextSpawnTimer = 40;
     private MonsteriKakkonen kakkonenScript;
     private markoscript markoScript;
     public GameOver go;
+    public bool canSpawn = false;
+    public int i;
 
     
 
@@ -28,9 +30,10 @@ public class MonsterSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        i = Random.Range(0, 2);
         if (GlobalGameState.instance.progression == 2)
         {
-            nextSpawnTimer = 35;
+            nextSpawnTimer = 10;
         }
         if (Time.time >= nextUpdate)
         {
@@ -41,15 +44,18 @@ public class MonsterSpawn : MonoBehaviour
 
         index = Random.Range(0, spawnPoints.Length);
 
-        if (nextSpawn == nextSpawnTimer) //15 -> 45
+        if (nextSpawn >= nextSpawnTimer) //15 -> 45
         {
+            canSpawn = true;
             if (GlobalGameState.instance.progression == 1)
             {
                 canSpawnMarko = true;
             }
             if (GlobalGameState.instance.progression == 2)
             {
-                KakkonenTaiMarko();
+
+                canSpawnKakkonen = true;
+                canSpawnMarko = false;
                 
             }
             if (GlobalGameState.instance.progression == 0)
@@ -73,10 +79,11 @@ public class MonsterSpawn : MonoBehaviour
     }
     void UpdateEverySecond()
     {
+
         nextSpawn++;
         if (canSpawnKakkonen)
         {
-            SpawnKakkonen();
+            SpawnRandom();
         }
         if (canSpawnMarko)
         {
@@ -93,6 +100,7 @@ public class MonsterSpawn : MonoBehaviour
         kakkonenScript = mon.GetComponent<MonsteriKakkonen>();
         kakkonenScript.WhichSide(spawnPoints[index].tag);
         nextSpawn = 0;
+        canSpawn = false;
         
     }
 
@@ -105,19 +113,33 @@ public class MonsterSpawn : MonoBehaviour
         markoScript = mon.GetComponent<markoscript>();
         markoScript.WhichSide(spawnPoints[index].tag);
         nextSpawn = 0;
+        canSpawn = false;
 
     }
 
-
-    void KakkonenTaiMarko()
+    void SpawnRandom()
     {
-        int i = Random.Range(0, 2);
-        if (i == 1)
+        
+        if (i == 0)
         {
-            Debug.Log("marko");
-            canSpawnMarko = true;
+            var mon = Instantiate(Marko, spawnPoints[index].transform);
+            //mon.transform.localRotation = spawnPoints[index].transform.rotation;
+            mon.SetActive(true);
+            canSpawnMarko = false;
+            canSpawnKakkonen = false;
+            markoScript = mon.GetComponent<markoscript>();
+            markoScript.WhichSide(spawnPoints[index].tag);
+            nextSpawn = 0;
         }
-        else Debug.Log("kakkonen");
-        canSpawnKakkonen = true;
+        else
+        {
+            var mon = Instantiate(Kakkonen, spawnPoints[index].transform);
+            //mon.transform.localRotation = spawnPoints[index].transform.rotation;
+            mon.SetActive(true);
+            canSpawnKakkonen = false;
+            kakkonenScript = mon.GetComponent<MonsteriKakkonen>();
+            kakkonenScript.WhichSide(spawnPoints[index].tag);
+            nextSpawn = 0;
+        }
     }
 }
