@@ -24,6 +24,7 @@ public class MonsteriKakkonen : MonoBehaviour
     public bool front = false;
     public bool backRight = false;
     public bool backLeft = false;
+    public Renderer rend;
 
     public int fadeSpeed;
 
@@ -36,6 +37,8 @@ public class MonsteriKakkonen : MonoBehaviour
     }
     private void Update()
     {
+
+       
 		if(!GlobalGameState.instance.isGameOver)
 			{
 			if (timer == 30 && isPlayerAlive) // jos timer menee tuohon ja et oo kattonu siihen niin game over
@@ -96,9 +99,17 @@ public class MonsteriKakkonen : MonoBehaviour
     }
     private void FadeOut()
     {
-        Destroy(kakkonen); //fadeout t�nne
+        Color objectColor = rend.material.color;
+        float fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
 
-       
+        objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+        rend.material.color = objectColor;
+        if (objectColor.a <= 0)
+        {
+            Destroy(kakkonen);
+        }
+
+
     }
     private void LookLeft()
     {

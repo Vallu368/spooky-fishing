@@ -103,7 +103,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4165764607873447068}
   - component: {fileID: 2954628933472746740}
-  - component: {fileID: 7408694725446166869}
   - component: {fileID: 3730847948729896594}
   - component: {fileID: 482056890122571660}
   m_Layer: 0
@@ -136,47 +135,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3730847948729896597}
   m_Mesh: {fileID: 6097188000684528178, guid: b0adcd6ba1dce0e40869deddc963574e, type: 3}
---- !u!23 &7408694725446166869
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730847948729896597}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -876546973899608171, guid: b0adcd6ba1dce0e40869deddc963574e, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3730847948729896594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +160,8 @@ MonoBehaviour:
   front: 0
   backRight: 0
   backLeft: 0
-  fadeSpeed: 0
+  rend: {fileID: 8951521959895391477}
+  fadeSpeed: 5
   playerNoticed: 0
 --- !u!82 &482056890122571660
 AudioSource:
@@ -213,7 +172,7 @@ AudioSource:
   m_GameObject: {fileID: 3730847948729896597}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cad40300dc10ac74d891fc4554a4e689, type: 2}
   m_audioClip: {fileID: 8300000, guid: d785c51e5c874b74aa6bd43d3ae3e6a2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -351,6 +310,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3cc120b19096e11458754663ae913eec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c88b5ddea294b9b4b993f4ee493827e2, type: 2}
     - target: {fileID: 919132149155446097, guid: 3cc120b19096e11458754663ae913eec, type: 3}
       propertyPath: m_Name
       value: Kakkonen
@@ -365,5 +328,10 @@ GameObject:
 --- !u!4 &7814058814003718042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3cc120b19096e11458754663ae913eec, type: 3}
+  m_PrefabInstance: {fileID: 7780993557595078769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8951521959895391477 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 3cc120b19096e11458754663ae913eec, type: 3}
   m_PrefabInstance: {fileID: 7780993557595078769}
   m_PrefabAsset: {fileID: 0}
