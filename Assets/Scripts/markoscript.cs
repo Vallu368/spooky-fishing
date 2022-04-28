@@ -27,7 +27,6 @@ public class markoscript : MonoBehaviour
 	public bool playerNoticed = false;
 
 	public int timer = 0;
-	public int markoWaiting;
 
 	void Start()
 	{
@@ -75,14 +74,15 @@ public class markoscript : MonoBehaviour
 
 	private void UpdateEverySecond()
 	{
+		if (playerLight.flashlightActive)
+        {
+			timer++;
+        }
 		if (timer >= 10)
         {
 			StartCoroutine(PlayerDies());
         }
-		if (!playerNoticed)
-		{
-			timer++;
-		}
+		
 	}
 
 	IEnumerator PlayerDies()
