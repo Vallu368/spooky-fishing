@@ -7,7 +7,7 @@ public class Cutscene : MonoBehaviour
 {
     public bool finished { get; private set; }
 
-    protected IEnumerator WriteText(string input, Text textHolder, float delay, float delayBetweenLines)
+    protected IEnumerator WriteText(string input, Text textHolder, float delay)//, float delayBetweenLines)
     {
         for(int i = 0; i < input.Length; i++)
         {

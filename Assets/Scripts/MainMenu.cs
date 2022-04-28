@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         //Time.timeScale = 1f;
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene("AlkuCutScene");
     }
 
     public Dropdown resolutionDropdown;

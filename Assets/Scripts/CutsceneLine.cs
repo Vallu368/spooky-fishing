@@ -17,6 +17,6 @@ public class CutsceneLine : Cutscene
 
     private void Start()
     {
-        StartCoroutine(WriteText(input, textHolder, Delay, DelayBetweenLines));
+        StartCoroutine(WriteText(input, textHolder, Delay)); //, DelayBetweenLines));
     }
 }

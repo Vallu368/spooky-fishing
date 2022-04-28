@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LineHolder : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class LineHolder : MonoBehaviour
             yield return new WaitUntil(()=> transform.GetChild(i).GetComponent<CutsceneLine>().finished);
         }
         gameObject.SetActive(false);
+        SceneManager.LoadScene("Main Scene");
     }
 
     private void Deactivate()
