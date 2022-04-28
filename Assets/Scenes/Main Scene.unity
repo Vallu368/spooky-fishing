@@ -751,10 +751,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SFX Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 8170359807147720294, guid: 185ced72287f8be4081dd1da73f035cc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 185ced72287f8be4081dd1da73f035cc, type: 3}
 --- !u!1 &818262045 stripped
@@ -848,28 +844,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2280145709846060246, guid: 10b6b49740f805346a702e5607e37250, type: 3}
   m_PrefabInstance: {fileID: 2280145709621932182}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1076171093 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9222124186133312726, guid: f1b347cdae35db04ca9a285263047576, type: 3}
-  m_PrefabInstance: {fileID: 9222124187053393961}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1076171094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076171093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7dd9145a7089e546b5bb4890f9d075e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGameOver: 0
-  isGamePaused: 0
-  isInventoryOpen: 0
-  progression: 0
-  totalFishCaught: 0
 --- !u!1 &1078744930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5346170231530210653, guid: 10b6b49740f805346a702e5607e37250, type: 3}
@@ -6020,17 +5994,49 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1668685215}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: checkpoint1
-      value: 
-      objectReference: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+      propertyPath: HowManyFishesToEnd
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: totalFishForCheckpoint1
+      propertyPath: checkpoint1Fishes.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: totalFishForCheckpoint2
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: checkpoint1Fishes.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 297576a1077a203478c26d23b63ea6ef, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint1Fishes.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 01aeacedb98ac8e438d8acb04c39e4dd, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint1Fishes.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint1Fishes.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint2Fishes.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
 --- !u!1001 &2277701935451606653
@@ -6286,6 +6292,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2113054328, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
+      propertyPath: m_Intensity
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
       propertyPath: cam
       value: 
@@ -6294,10 +6304,6 @@ PrefabInstance:
       propertyPath: themHands
       value: 
       objectReference: {fileID: 1882540255}
-    - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
-      propertyPath: fishScript
-      value: 
-      objectReference: {fileID: 595806612}
     - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
       propertyPath: gameOverCanvas
       value: 
@@ -6460,6 +6466,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4159852613656716757, guid: 85d9be7ff3117564d8a5c64ab7d247d9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4159852613656716759, guid: 85d9be7ff3117564d8a5c64ab7d247d9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6517,6 +6527,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3685577934222745720}
     m_Modifications:
+    - target: {fileID: 4933524828837046245, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: cad40300dc10ac74d891fc4554a4e689, type: 2}
     - target: {fileID: 8492239899365351635, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6574,10 +6588,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1645195065}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
-      propertyPath: fishScript
-      value: 
-      objectReference: {fileID: 595806612}
-    - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1065810311}
@@ -6597,6 +6607,10 @@ PrefabInstance:
     - target: {fileID: 4889164454660676565, guid: 7e11f92cd1f415645842b78af1d844ac, type: 3}
       propertyPath: m_Name
       value: spawnL
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889164454660676567, guid: 7e11f92cd1f415645842b78af1d844ac, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4889164454660676569, guid: 7e11f92cd1f415645842b78af1d844ac, type: 3}
       propertyPath: m_RootOrder
