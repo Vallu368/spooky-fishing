@@ -25,12 +25,14 @@ public class FishScript : MonoBehaviour
     public int spawnedFishIndex = 0;
     public int count1 = 0;
     public int count2 = 0;
+    public int count3 = 0;
 
 
     private void Update()
     {
         count1 = fishes.Count;
         count2 = checkpoint1Fishes.Count;
+        count3 = checkpoint2Fishes.Count;
         
         if (fishing.caughtFish)
         {
@@ -69,7 +71,7 @@ public class FishScript : MonoBehaviour
             }
             else
             {
-                index = Random.Range(0, count2);
+                index = Random.Range(0, count3);
                 //valitsee randomi kalan
                 var fish = Instantiate(checkpoint2Fishes[index].prefab, this.transform); // spawnaa kalan
                 repeat = checkpoint2Fishes[index].canSpawnMultipleTimes;
