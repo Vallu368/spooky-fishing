@@ -10,6 +10,8 @@ public class Fishing : MonoBehaviour
     public Animator anim;
     public Animator anim_vapa;
 
+    public GameObject tutorialText;
+
     public bool isFishing = false;
     public bool waitingForFish = false;
     public bool gotFish = false;
@@ -71,6 +73,11 @@ public class Fishing : MonoBehaviour
 
             isFishing = true;
             waitingForFish = true;
+
+            if (tutorialText.active)
+            {
+                tutorialText.SetActive(false);
+            }
             
         }
         if (Input.GetKey("space") && gotFish && cameraMovement.lookDown) //ottaa kalan kiinni

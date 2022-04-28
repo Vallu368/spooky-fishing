@@ -43,7 +43,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.3
   m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -151,6 +151,7 @@ MonoBehaviour:
   skin: {fileID: 7438483940484316448}
   kakkonenGotU: {fileID: 8300000, guid: 2fe4fac740e1e7c43aaba208263ffb07, type: 3}
   cam: {fileID: 0}
+  fishScript: {fileID: 0}
   kakkonen: {fileID: 3730847948729896597}
   gameOverScreen: {fileID: 0}
   gameOverCanvas: {fileID: 0}

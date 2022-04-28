@@ -33,7 +33,7 @@ public class MonsterSpawn : MonoBehaviour
         i = Random.Range(0, 2);
         if (GlobalGameState.instance.progression == 2)
         {
-            nextSpawnTimer = 10;
+            nextSpawnTimer = nextSpawnTimer - 10;
         }
         if (Time.time >= nextUpdate)
         {

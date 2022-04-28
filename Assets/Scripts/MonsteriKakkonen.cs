@@ -9,6 +9,7 @@ public class MonsteriKakkonen : MonoBehaviour
     [SerializeField] AudioClip kakkonenGotU;
 
     public CameraMovement cam;
+    public FishScript fishScript;
     public GameObject kakkonen;
     public GameObject gameOverScreen;
     private GameOver gameOverScript;
@@ -43,7 +44,7 @@ public class MonsteriKakkonen : MonoBehaviour
 			{
 			if (timer == 30 && isPlayerAlive) // jos timer menee tuohon ja et oo kattonu siihen niin game over
 			{
-				PlayerDies();
+                PlayerDies();
 			}
 			if (Time.time >= nextUpdate)
 			{
@@ -94,6 +95,7 @@ public class MonsteriKakkonen : MonoBehaviour
 			gameOverScreen.SetActive(true);
 			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
 			GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
+            GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint2;
 		}
 
     }
