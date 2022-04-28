@@ -10,6 +10,8 @@ public class Fishing : MonoBehaviour
     public Animator anim;
     public Animator anim_vapa;
 
+    public GameObject tutorialText;
+
     public bool isFishing = false;
     public bool waitingForFish = false;
     public bool gotFish = false;
@@ -53,7 +55,7 @@ public class Fishing : MonoBehaviour
         {
             checkpointFish = 1;
         }
-        else if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint2)
+        else if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint2 && GlobalGameState.instance.progression == 1)
         {
             checkpointFish = 2;
         }
@@ -71,6 +73,11 @@ public class Fishing : MonoBehaviour
 
             isFishing = true;
             waitingForFish = true;
+
+            if (tutorialText.active)
+            {
+                tutorialText.SetActive(false);
+            }
             
         }
         if (Input.GetKey("space") && gotFish && cameraMovement.lookDown) //ottaa kalan kiinni

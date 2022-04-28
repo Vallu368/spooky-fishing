@@ -195,6 +195,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   Marko: {fileID: 9210733796618967770}
   gameOverScreen: {fileID: 0}
+  fishScript: {fileID: 0}
   gameOverCanvas: {fileID: 0}
   leftSide: 0
   rightSide: 0
@@ -212,7 +213,7 @@ AudioSource:
   m_GameObject: {fileID: 9210733796618967770}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cad40300dc10ac74d891fc4554a4e689, type: 2}
   m_audioClip: {fileID: 8300000, guid: 01a32471fff649841a0aeba1b484e1f3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

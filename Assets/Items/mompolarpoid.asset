@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Polaroid of mom
   itemIcon: {fileID: 21300000, guid: 588ee1ed45183314b9c0c70c7413c44a, type: 3}
   description: Staring. Got it.
-  itemType: 0
+  itemType: 1
   prefab: {fileID: 222513561611430347, guid: be719bf70d7c0a64faafd89e633272fc, type: 3}
   canSpawnMultipleTimes: 0

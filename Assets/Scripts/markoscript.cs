@@ -13,6 +13,7 @@ public class markoscript : MonoBehaviour
 	public GameObject Marko;
 	lightF playerLight;
 	public GameObject gameOverScreen;
+	public FishScript fishScript;
 	private GameOver gameOverScript;
 	public GameObject gameOverCanvas;
 
@@ -74,10 +75,15 @@ public class markoscript : MonoBehaviour
 
 	private void UpdateEverySecond()
 	{
-		if (!playerNoticed)
-		{
+		if (playerLight.flashlightActive)
+        {
 			timer++;
-		}
+        }
+		if (timer >= 10)
+        {
+			StartCoroutine(PlayerDies());
+        }
+		
 	}
 
 	IEnumerator PlayerDies()
@@ -93,6 +99,13 @@ public class markoscript : MonoBehaviour
 			gameOverScreen.SetActive(true);
 			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
 			GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
+			if (GlobalGameState.instance.progression == 1)
+            {
+				GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint1;
+			}
+			if (GlobalGameState.instance.progression == 2) {
+				GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint2;
+            }
 		}
 
 	}
@@ -105,6 +118,7 @@ public class markoscript : MonoBehaviour
 
 	private void LookLeft()
 	{
+		
 		if (cam.lookLeft)
 		{
 			playerNoticed = true;       //pelaaja huomattu
