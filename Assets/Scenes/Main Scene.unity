@@ -870,6 +870,7 @@ MonoBehaviour:
   skin: {fileID: 0}
   kakkonenGotU: {fileID: 0}
   cam: {fileID: 963194229}
+  fishScript: {fileID: 0}
   kakkonen: {fileID: 1098295510}
   gameOverScreen: {fileID: 818262045}
   gameOverCanvas: {fileID: 1065810311}
@@ -5995,10 +5996,6 @@ PrefabInstance:
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: HowManyFishesToEnd
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: totalFishForCheckpoint1
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: checkpoint1Fishes.Array.size
