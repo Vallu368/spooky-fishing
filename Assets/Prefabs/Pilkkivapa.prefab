@@ -274,7 +274,7 @@ AudioSource:
   m_GameObject: {fileID: 1899736253423498000}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cad40300dc10ac74d891fc4554a4e689, type: 2}
   m_audioClip: {fileID: 8300000, guid: a0e46eeab84f57147be1bdb87fc1666d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -421,8 +421,8 @@ MonoBehaviour:
   fishing: {fileID: 1899736253423498002}
   index: 0
   inventory: {fileID: 0}
-  totalFishForCheckpoint1: 2
-  totalFishForCheckpoint2: 6
+  totalFishForCheckpoint1: 4
+  totalFishForCheckpoint2: 10
   animator: {fileID: 1899736254477189218}
   repeat: 0
   spawnedFishIndex: 0
