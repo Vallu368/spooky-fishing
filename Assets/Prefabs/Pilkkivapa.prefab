@@ -234,6 +234,7 @@ MonoBehaviour:
   splashSound: {fileID: 8300000, guid: db1366e187088cc4186047899b84db4b, type: 3}
   anim: {fileID: 1899736254184880290}
   anim_vapa: {fileID: 1144115338}
+  tutorialText: {fileID: 0}
   isFishing: 0
   waitingForFish: 0
   gotFish: 0
@@ -416,17 +417,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 297576a1077a203478c26d23b63ea6ef, type: 2}
   - {fileID: 11400000, guid: 01aeacedb98ac8e438d8acb04c39e4dd, type: 2}
   - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
-  - {fileID: 11400000, guid: c370e96296ced664faba851753b59637, type: 2}
+  - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
   checkpoint2Fishes:
   - {fileID: 11400000, guid: c370e96296ced664faba851753b59637, type: 2}
-  - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
-  - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
-  - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
-  - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
   checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
   masterFish: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
-  HowManyFishesToEnd: 0
+  HowManyFishesToEnd: 15
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0
@@ -438,6 +435,7 @@ MonoBehaviour:
   spawnedFishIndex: 0
   count1: 0
   count2: 0
+  count3: 0
 --- !u!95 &1899736254477189218
 Animator:
   serializedVersion: 3

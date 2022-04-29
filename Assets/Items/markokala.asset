@@ -16,5 +16,5 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: ca1cb730c81a68848bffc5ec0e19e703, type: 3}
   description: "Oh god, the smell! It\u2019s covered in\u2026 black goo?"
   itemType: 0
-  prefab: {fileID: 919132149155446097, guid: c617c684177e61948bd2c9ec60300168, type: 3}
-  canSpawnMultipleTimes: 0
+  prefab: {fileID: 2664100316139834396, guid: 34e98d7d4eeaa0e4cba0488144e47a63, type: 3}
+  canSpawnMultipleTimes: 1

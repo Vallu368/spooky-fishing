@@ -8,18 +8,23 @@ public class SFX : MonoBehaviour
 	//[SerializeField] AudioClip enemyHurtSound, enemyBlockSound, bombSound;
 	AudioSource sounds;
 	[SerializeField] AudioMixer fxMixer;
-	
+
 	public static SFX instance; //Refer to it by SFX.instance. followed by method or variable
 	void Awake() //Make static singleton instance
 	{
 		if (instance != null)
-			GameObject.Destroy(instance);
+		{
+			Destroy(gameObject);
+			//GameObject.Destroy(instance);
+		}
 		else
+		{
 			instance = this;
+		}
 		DontDestroyOnLoad(this);
 	}
 
-	void Start() 
+	void Start()
 	{
 		sounds = GetComponent<AudioSource>();
 	}

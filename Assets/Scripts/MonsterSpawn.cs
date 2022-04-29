@@ -33,7 +33,7 @@ public class MonsterSpawn : MonoBehaviour
         i = Random.Range(0, 2);
         if (GlobalGameState.instance.progression == 2)
         {
-            nextSpawnTimer = nextSpawnTimer - 10;
+            nextSpawnTimer = 25;
         }
         if (Time.time >= nextUpdate)
         {
@@ -46,7 +46,6 @@ public class MonsterSpawn : MonoBehaviour
 
         if (nextSpawn >= nextSpawnTimer) //15 -> 45
         {
-            canSpawn = true;
             if (GlobalGameState.instance.progression == 1)
             {
                 canSpawnMarko = true;
