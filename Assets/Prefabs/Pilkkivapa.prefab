@@ -235,6 +235,7 @@ MonoBehaviour:
   anim: {fileID: 1899736254184880290}
   anim_vapa: {fileID: 1144115338}
   tutorialText: {fileID: 0}
+  fadePanel: {fileID: 0}
   isFishing: 0
   waitingForFish: 0
   gotFish: 0
@@ -243,6 +244,7 @@ MonoBehaviour:
   endWait: 0
   checkpointFish: 0
   caughtFish: 0
+  fadeSpeed: 0
   i: 0
   wait: 0
   catchFishTimer: 0
@@ -409,9 +411,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishes:
-  - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
+  - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
+  - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   checkpoint1Fishes:
   - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
@@ -431,8 +434,8 @@ MonoBehaviour:
   fishing: {fileID: 1899736253423498002}
   index: 0
   inventory: {fileID: 0}
-  totalFishForCheckpoint1: 4
-  totalFishForCheckpoint2: 12
+  totalFishForCheckpoint1: 1
+  totalFishForCheckpoint2: 3
   animator: {fileID: 1899736254477189218}
   repeat: 0
   spawnedFishIndex: 0
