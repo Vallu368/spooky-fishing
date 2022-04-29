@@ -6019,11 +6019,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: totalFishForCheckpoint1
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: totalFishForCheckpoint2
-      value: 12
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
