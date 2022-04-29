@@ -175,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2280145709024039267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -269,12 +269,12 @@ RectTransform:
   - {fileID: 4414671265589786737}
   - {fileID: 4414671265183970407}
   - {fileID: 4414671266263203574}
-  - {fileID: 4414671266249556765}
-  - {fileID: 4414671265842299718}
-  - {fileID: 4414671264830180452}
   - {fileID: 4414671266004851020}
+  - {fileID: 4414671266249556765}
   - {fileID: 4414671264557314673}
+  - {fileID: 4414671265842299718}
   - {fileID: 4414671265329507074}
+  - {fileID: 4414671264830180452}
   m_Father: {fileID: 2280145709024039267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1794,7 +1794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1870,7 +1870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964755870917857687, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (11)
+      value: SlotPanel (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
@@ -2160,7 +2160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2236,7 +2236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964755870917857687, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (8)
+      value: SlotPanel (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
@@ -2282,7 +2282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2358,7 +2358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964755870917857687, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (10)
+      value: SlotPanel (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
@@ -2526,7 +2526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2602,7 +2602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964755870917857687, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (6)
+      value: SlotPanel (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
@@ -2770,7 +2770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2846,7 +2846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964755870917857687, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (9)
+      value: SlotPanel (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
@@ -2892,7 +2892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2513189260873646304, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2968,7 +2968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5964755870917857687, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
       propertyPath: m_Name
-      value: SlotPanel (7)
+      value: SlotPanel (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 380d715d78f3fd842a6ec3ed5cfc502b, type: 3}
