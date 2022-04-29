@@ -5994,8 +5994,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1668685215}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: checkpoint1
+      value: 
+      objectReference: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: HowManyFishesToEnd
-      value: 15
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: totalFishForCheckpoint1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: totalFishForCheckpoint2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: checkpoint1Fishes.Array.size
@@ -6292,10 +6304,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2113054328, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
-      propertyPath: m_Intensity
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
       propertyPath: cam
       value: 
@@ -6304,6 +6312,10 @@ PrefabInstance:
       propertyPath: themHands
       value: 
       objectReference: {fileID: 1882540255}
+    - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
+      propertyPath: fishScript
+      value: 
+      objectReference: {fileID: 595806612}
     - target: {fileID: 3730847948729896594, guid: ca4e58b1df5a6864b94ecb542aa49e7d, type: 3}
       propertyPath: gameOverCanvas
       value: 
@@ -6587,6 +6599,14 @@ PrefabInstance:
       propertyPath: themHands
       value: 
       objectReference: {fileID: 1645195065}
+    - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
+      propertyPath: fishScript
+      value: 
+      objectReference: {fileID: 595806612}
+    - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
+      propertyPath: themHands2
+      value: 
+      objectReference: {fileID: 1882540255}
     - target: {fileID: 9210733796618967771, guid: e815e781cbb4ebc478c984a489e55fc2, type: 3}
       propertyPath: gameOverCanvas
       value: 

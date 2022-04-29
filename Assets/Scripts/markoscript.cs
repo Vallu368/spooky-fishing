@@ -6,7 +6,8 @@ public class markoscript : MonoBehaviour
 {
 	[SerializeField] GameObject themHands;
 	[SerializeField] GameObject skin;
-	[SerializeField] AudioClip markoGotU;
+    [SerializeField] GameObject themHands2;
+    [SerializeField] AudioClip markoGotU;
 
 	private bool isPlayerAlive = true;
 	public CameraMovement cam;
@@ -75,13 +76,13 @@ public class markoscript : MonoBehaviour
 
 	private void UpdateEverySecond()
 	{
-		if (playerLight.flashlightActive)
+		if (playerLight.flashlightActive && isPlayerAlive)
         {
 			timer++;
         }
-		if (timer >= 10)
+		if (timer >= 10 && isPlayerAlive)
         {
-			StartCoroutine(PlayerDies());
+			StartCoroutine(PlayerDies2());
         }
 		
 	}
@@ -109,8 +110,32 @@ public class markoscript : MonoBehaviour
 		}
 
 	}
+    IEnumerator PlayerDies2()
+    {
+        if (isPlayerAlive)
+        {
+            SFX.instance.PlayClip(markoGotU, 1f);
+            skin.SetActive(false);
+            themHands2.SetActive(true);
+            isPlayerAlive = false;
+            yield return new WaitForSeconds(1.5f);
+            gameOverScript.GameEnded();
+            gameOverScreen.SetActive(true);
+            GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
+            GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
+            if (GlobalGameState.instance.progression == 1)
+            {
+                GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint1;
+            }
+            if (GlobalGameState.instance.progression == 2)
+            {
+                GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint2;
+            }
+        }
 
-	private void FadeOut()
+    }
+
+    private void FadeOut()
 	{
 		Debug.Log("he ded");
 		Destroy(gameObject);

@@ -63,7 +63,7 @@ public class FishScript : MonoBehaviour
         }
         if (GlobalGameState.instance.progression == 2)
         {
-            if (GlobalGameState.instance.totalFishCaught == HowManyFishesToEnd)
+            if (GlobalGameState.instance.totalFishCaught >= HowManyFishesToEnd)
             {
                 var fish = Instantiate(masterFish.prefab, this.transform);
                 test = fish;
