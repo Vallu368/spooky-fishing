@@ -6,8 +6,7 @@ public class markoscript : MonoBehaviour
 {
 	[SerializeField] GameObject themHands;
 	[SerializeField] GameObject skin;
-    [SerializeField] GameObject themHands2;
-    [SerializeField] AudioClip markoGotU;
+	[SerializeField] AudioClip markoGotU;
 
 	private bool isPlayerAlive = true;
 	public CameraMovement cam;
@@ -76,13 +75,13 @@ public class markoscript : MonoBehaviour
 
 	private void UpdateEverySecond()
 	{
-		if (playerLight.flashlightActive && isPlayerAlive)
+		if (playerLight.flashlightActive)
         {
 			timer++;
         }
-		if (timer >= 10 && isPlayerAlive)
+		if (timer >= 10)
         {
-			StartCoroutine(PlayerDies2());
+			StartCoroutine(PlayerDies());
         }
 		
 	}
@@ -110,32 +109,8 @@ public class markoscript : MonoBehaviour
 		}
 
 	}
-    IEnumerator PlayerDies2()
-    {
-        if (isPlayerAlive)
-        {
-            SFX.instance.PlayClip(markoGotU, 1f);
-            skin.SetActive(false);
-            themHands2.SetActive(true);
-            isPlayerAlive = false;
-            yield return new WaitForSeconds(1.5f);
-            gameOverScript.GameEnded();
-            gameOverScreen.SetActive(true);
-            GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
-            GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
-            if (GlobalGameState.instance.progression == 1)
-            {
-                GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint1;
-            }
-            if (GlobalGameState.instance.progression == 2)
-            {
-                GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint2;
-            }
-        }
 
-    }
-
-    private void FadeOut()
+	private void FadeOut()
 	{
 		Debug.Log("he ded");
 		Destroy(gameObject);
@@ -154,7 +129,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookLeft && !playerLight.flashlightActive && cam.time == 2) //Timer removed
+		if (!cam.lookLeft && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 					//jos k��ntyy pois monsterista ja valot on pois p��lt� pari sekkaa niin monsteri katoaa
 		{
 			FadeOut();
@@ -173,7 +148,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookRight && !playerLight.flashlightActive && cam.time == 2) //Timer removed
+		if (!cam.lookRight && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();
@@ -192,7 +167,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookForward && !playerLight.flashlightActive && cam.time == 2) //Timer removed
+		if (!cam.lookForward && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();
@@ -211,7 +186,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookBackLeft && !playerLight.flashlightActive && cam.time == 2) //Timer removed
+		if (!cam.lookBackLeft && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();
@@ -230,7 +205,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookBackRight && !playerLight.flashlightActive && cam.time == 2) //Timer removed
+		if (!cam.lookBackRight && !playerLight.flashlightActive && cam.time == 5) //Timer removed
 		
 		{
 			FadeOut();
