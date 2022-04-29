@@ -5,6 +5,7 @@ using UnityEngine;
 public class markoscript : MonoBehaviour
 {
 	[SerializeField] GameObject themHands;
+	[SerializeField] GameObject themHands2;
 	[SerializeField] GameObject skin;
 	[SerializeField] AudioClip markoGotU;
 
@@ -81,7 +82,7 @@ public class markoscript : MonoBehaviour
         }
 		if (timer >= 10)
         {
-			StartCoroutine(PlayerDies());
+			StartCoroutine(PlayerDies2());
         }
 		
 	}
@@ -106,6 +107,30 @@ public class markoscript : MonoBehaviour
 			if (GlobalGameState.instance.progression == 2) {
 				GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint2;
             }
+		}
+
+	}
+	IEnumerator PlayerDies2()
+	{
+		if (isPlayerAlive)
+		{
+			SFX.instance.PlayClip(markoGotU, 1f);
+			skin.SetActive(false);
+			themHands2.SetActive(true);
+			isPlayerAlive = false;
+			yield return new WaitForSeconds(1.5f);
+			gameOverScript.GameEnded();
+			gameOverScreen.SetActive(true);
+			GameObject.Find("Player").GetComponentInChildren<InventoryManager>().enabled = false;
+			GameObject.Find("Canvas").GetComponent<Pause>().enabled = false;
+			if (GlobalGameState.instance.progression == 1)
+			{
+				GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint1;
+			}
+			if (GlobalGameState.instance.progression == 2)
+			{
+				GlobalGameState.instance.totalFishCaught = fishScript.totalFishForCheckpoint2;
+			}
 		}
 
 	}
