@@ -154,7 +154,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookLeft && !playerLight.flashlightActive && cam.time == 4) //Timer removed
+		if (!cam.lookLeft && !playerLight.flashlightActive && cam.time == 2) //Timer removed
 					//jos k��ntyy pois monsterista ja valot on pois p��lt� pari sekkaa niin monsteri katoaa
 		{
 			FadeOut();
@@ -173,7 +173,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookRight && !playerLight.flashlightActive && cam.time == 5) //Timer removed
+		if (!cam.lookRight && !playerLight.flashlightActive && cam.time == 2) //Timer removed
 		
 		{
 			FadeOut();
@@ -192,7 +192,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookForward && !playerLight.flashlightActive && cam.time == 5) //Timer removed
+		if (!cam.lookForward && !playerLight.flashlightActive && cam.time == 2) //Timer removed
 		
 		{
 			FadeOut();
@@ -211,7 +211,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookBackLeft && !playerLight.flashlightActive && cam.time == 5) //Timer removed
+		if (!cam.lookBackLeft && !playerLight.flashlightActive && cam.time == 2) //Timer removed
 		
 		{
 			FadeOut();
@@ -230,7 +230,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookBackRight && !playerLight.flashlightActive && cam.time == 5) //Timer removed
+		if (!cam.lookBackRight && !playerLight.flashlightActive && cam.time == 2) //Timer removed
 		
 		{
 			FadeOut();

@@ -428,13 +428,13 @@ MonoBehaviour:
   checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
   masterFish: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
-  HowManyFishesToEnd: 24
+  HowManyFishesToEnd: 14
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0
   inventory: {fileID: 0}
   totalFishForCheckpoint1: 3
-  totalFishForCheckpoint2: 12
+  totalFishForCheckpoint2: 8
   animator: {fileID: 1899736254477189218}
   repeat: 0
   spawnedFishIndex: 0
