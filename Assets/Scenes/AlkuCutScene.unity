@@ -258,7 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: "\u201CWhy do you look so sad?\u201D , asked a fish, poking its head out
     of a hole in the thick ice."
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 2
 --- !u!114 &110532656
 MonoBehaviour:
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: There once was a Star that fell from the sky.
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 2
 --- !u!114 &142995744
 MonoBehaviour:
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: ' Fell into the cold, dark forest deep.'
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 2
 --- !u!114 &504801128
 MonoBehaviour:
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: "\u201CAnd in return I\u2019ll bless you and your children\u201D, said the
     little Star and slid into the belly of the fish. \u201D"
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 0
 --- !u!114 &1213702394
 MonoBehaviour:
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: "\u201CI\u2019ll keep you warm and safe until it\u2019s warm again\u201D,
     the fish said, holding its pink mouth open."
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 2
 --- !u!114 &1234158918
 MonoBehaviour:
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: Then, upon a lake she came.
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 2
 --- !u!114 &1497054420
 MonoBehaviour:
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: "\u201COh, I\u2019m so hopelessly cold and my light\u2019s fading. If I
     don't get back home soon, I\u2019ll surely die.\u201D"
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 2
 --- !u!114 &1698930482
 MonoBehaviour:
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: "She wandered all around but couldn\u2019t find her way back home."
-  Delay: 0.07
+  Delay: 0.1
   DelayBetweenLines: 2
 --- !u!114 &2105038648
 MonoBehaviour:
