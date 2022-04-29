@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class FishScript : MonoBehaviour
 {
 
+    [SerializeField] AudioClip endingFishSplash;
 
     public List<FishableItem> fishes;
     public List<FishableItem> checkpoint1Fishes;
@@ -170,6 +171,7 @@ public class FishScript : MonoBehaviour
     }
     public void CaughtEndingFish()
     {
+        AudioSource.PlayClipAtPoint(endingFishSplash, Camera.main.transform.position);
         animator.Play("Fish up");
     }
 }

@@ -5998,6 +5998,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
     - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
+      propertyPath: endingFishSplash
+      value: 
+      objectReference: {fileID: 8300000, guid: 44eaf842c63e04042a517cdfec46d18d, type: 3}
+    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
       propertyPath: fishes.Array.size
       value: 1
       objectReference: {fileID: 0}

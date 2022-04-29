@@ -8,6 +8,9 @@ public class Fishing : MonoBehaviour
     [SerializeField] AudioClip siimanKelaus;
     [SerializeField] AudioClip splashSound;
 
+    [SerializeField] private float delayBeforeChange = 3f;
+    private float timeElapsed;
+
     public Animator anim;
     public Animator anim_vapa;
 
@@ -127,10 +130,9 @@ public class Fishing : MonoBehaviour
             }
             if (ending)
             {
-                endWait++;
-                if (endWait >= 5)
+                wait++;
+                if (wait > 5f)
                 {
-                    
                     SceneManager.LoadScene("LoppuCutscene");
                 }
             }
