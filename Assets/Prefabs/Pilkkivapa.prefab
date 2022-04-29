@@ -232,10 +232,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   siimanKelaus: {fileID: 8300000, guid: 82fea5e8922037f409856838bdf646fa, type: 3}
   splashSound: {fileID: 8300000, guid: db1366e187088cc4186047899b84db4b, type: 3}
+  delayBeforeChange: 3
   anim: {fileID: 1899736254184880290}
   anim_vapa: {fileID: 1144115338}
   tutorialText: {fileID: 0}
-  fadePanel: {fileID: 0}
   isFishing: 0
   waitingForFish: 0
   gotFish: 0
@@ -244,7 +244,6 @@ MonoBehaviour:
   endWait: 0
   checkpointFish: 0
   caughtFish: 0
-  fadeSpeed: 0
   i: 0
   wait: 0
   catchFishTimer: 0
@@ -410,11 +409,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200e4cd44fabe8b4d83452c05696ea0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endingFishSplash: {fileID: 8300000, guid: 44eaf842c63e04042a517cdfec46d18d, type: 3}
   fishes:
-  - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
   - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
-  - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
+  - {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
   checkpoint1Fishes:
   - {fileID: 11400000, guid: 4b02fce66317a8d4e975632374eb9c92, type: 2}
   - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
@@ -429,13 +428,13 @@ MonoBehaviour:
   checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
   masterFish: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
-  HowManyFishesToEnd: 22
+  HowManyFishesToEnd: 24
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0
   inventory: {fileID: 0}
-  totalFishForCheckpoint1: 1
-  totalFishForCheckpoint2: 3
+  totalFishForCheckpoint1: 3
+  totalFishForCheckpoint2: 12
   animator: {fileID: 1899736254477189218}
   repeat: 0
   spawnedFishIndex: 0

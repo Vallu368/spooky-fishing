@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3f6d2f7b678a81e4b9a0a8ea94462226, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 59b0a63fd3809824686e2cbf0def19f6, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -5993,42 +5993,6 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1668685215}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: checkpoint1
-      value: 
-      objectReference: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: endingFishSplash
-      value: 
-      objectReference: {fileID: 8300000, guid: 44eaf842c63e04042a517cdfec46d18d, type: 3}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: fishes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: HowManyFishesToEnd
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: fishes.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 01aeacedb98ac8e438d8acb04c39e4dd, type: 2}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: fishes.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: cd755c23f4ae54545a82f2408ed1e803, type: 2}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: fishes.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: totalFishForCheckpoint1
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899736254477189216, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
-      propertyPath: totalFishForCheckpoint2
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e06ecf49ba5ad0f4dad1ff8c7451081c, type: 3}
 --- !u!1001 &2277701935451606653
