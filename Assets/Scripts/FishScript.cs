@@ -13,6 +13,7 @@ public class FishScript : MonoBehaviour
     public FishableItem checkpoint1;
     public FishableItem checkpoint2;
     public FishableItem masterFish;
+    
     public int HowManyFishesToEnd;
     public int i = 0;
     public Fishing fishing;
@@ -27,10 +28,13 @@ public class FishScript : MonoBehaviour
     public int count1 = 0;
     public int count2 = 0;
     public int count3 = 0;
+    public bool endFish = false;
 
 
     private void Update()
     {
+            
+        
         count1 = fishes.Count;
         count2 = checkpoint1Fishes.Count;
         count3 = checkpoint2Fishes.Count;
@@ -64,14 +68,6 @@ public class FishScript : MonoBehaviour
         }
         if (GlobalGameState.instance.progression == 2)
         {
-            if (GlobalGameState.instance.totalFishCaught >= HowManyFishesToEnd)
-            {
-                var fish = Instantiate(masterFish.prefab, this.transform);
-                test = fish;
-                SceneManager.LoadScene("LoppuCutscene");
-
-            }
-            else
             {
                 index = Random.Range(0, count3);
                 //valitsee randomi kalan
@@ -112,6 +108,12 @@ public class FishScript : MonoBehaviour
         var fish = Instantiate(checkpoint2.prefab, this.transform);
         test = fish;
     }
+    public void SpawnEndingFish()
+    {
+        var fish = Instantiate(masterFish.prefab, this.transform);
+        test = fish;
+        endFish = true;
+    }
 
     public void SetGameObjectActive()
     {
@@ -132,6 +134,10 @@ public class FishScript : MonoBehaviour
         {
             inventory.Add(checkpoint1Fishes[index]);
         }
+        if (GlobalGameState.instance.progression == 2)
+        {
+            inventory.Add(checkpoint2Fishes[index]);
+        }
         if (!repeat)
         {
             Debug.Log("removing item");
@@ -144,6 +150,10 @@ public class FishScript : MonoBehaviour
             {
                 checkpoint2Fishes.Remove(checkpoint2Fishes[spawnedFishIndex]);
                 Debug.Log("removed " + checkpoint2Fishes[spawnedFishIndex].itemName);
+            }
+            if (endFish)
+            {
+                SceneManager.LoadScene("LoppuCutscene");
             }
         }
 

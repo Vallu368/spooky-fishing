@@ -61,6 +61,15 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("kakkonen can spawn");
 
         }
+        if (GlobalGameState.instance.progression >= 1 && !items.Contains(fishScript.checkpoint1))
+        {
+            Add(fishScript.checkpoint1);
+            
+        }
+        if (GlobalGameState.instance.progression >= 2 && !items.Contains(fishScript.checkpoint2))
+        {
+            Add(fishScript.checkpoint2);
+        }
 
     }
 

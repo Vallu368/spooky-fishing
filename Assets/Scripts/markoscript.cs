@@ -154,7 +154,7 @@ public class markoscript : MonoBehaviour
 			StartCoroutine(PlayerDies());
 		}
 
-		if (!cam.lookLeft && !playerLight.flashlightActive && cam.time == 5) //Timer removed
+		if (!cam.lookLeft && !playerLight.flashlightActive && cam.time == 4) //Timer removed
 					//jos k��ntyy pois monsterista ja valot on pois p��lt� pari sekkaa niin monsteri katoaa
 		{
 			FadeOut();

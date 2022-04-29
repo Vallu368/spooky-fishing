@@ -51,13 +51,17 @@ public class Fishing : MonoBehaviour
             UpdateEverySecond();
         }
 
-        if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint1)
+        if (GlobalGameState.instance.totalFishCaught >= fishScript.totalFishForCheckpoint1 && GlobalGameState.instance.progression == 0)
         {
             checkpointFish = 1;
         }
-        else if (GlobalGameState.instance.totalFishCaught == fishScript.totalFishForCheckpoint2 && GlobalGameState.instance.progression == 1)
+        else if (GlobalGameState.instance.totalFishCaught >= fishScript.totalFishForCheckpoint2 && GlobalGameState.instance.progression == 1)
         {
             checkpointFish = 2;
+        }
+        else if (GlobalGameState.instance.totalFishCaught >= fishScript.HowManyFishesToEnd && GlobalGameState.instance.progression == 2)
+        {
+            checkpointFish = 3;
         }
         else checkpointFish = 0;
 
@@ -159,6 +163,13 @@ public class Fishing : MonoBehaviour
                     anim.SetBool("caughtFish", true);
                     Debug.Log("checkpoint Fish!!");
                     fishScript.SpawnCheckpoint2();
+                    gotFish = true;
+                }
+                if (checkpointFish == 3)
+                {
+                    anim.SetBool("caughtFish", true);
+                    Debug.Log("END!!");
+                    fishScript.SpawnEndingFish();
                     gotFish = true;
                 }
                 if (checkpointFish == 0)
