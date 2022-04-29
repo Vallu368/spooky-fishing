@@ -64,14 +64,6 @@ public class MonsterSpawn : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            SpawnKakkonen();
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            SpawnMarko();
-        }
 
 
 
