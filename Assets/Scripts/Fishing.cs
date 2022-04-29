@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fishing : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class Fishing : MonoBehaviour
     public bool waitingForFish = false;
     public bool gotFish = false;
     public bool finishedFishing = false;
-
+    public bool ending = false;
+    public int endWait = 0;
     public int checkpointFish = 0;
 
     public bool caughtFish = false;
@@ -123,6 +125,15 @@ public class Fishing : MonoBehaviour
                     wait = 0;
                 }
             }
+            if (ending)
+            {
+                endWait++;
+                if (endWait >= 5)
+                {
+                    
+                    SceneManager.LoadScene("LoppuCutscene");
+                }
+            }
 
         }
 
@@ -171,6 +182,7 @@ public class Fishing : MonoBehaviour
                     Debug.Log("END!!");
                     fishScript.SpawnEndingFish();
                     gotFish = true;
+                    ending = true;
                 }
                 if (checkpointFish == 0)
                 {
@@ -209,6 +221,11 @@ public class Fishing : MonoBehaviour
             if (checkpointFish == 0)
             {
                 fishScript.CaughtFish();
+            }
+            if (checkpointFish == 3)
+            {
+                fishScript.CaughtEndingFish();
+                
             }
             caughtFish = true;
             fishScript.SetGameObjectActive();

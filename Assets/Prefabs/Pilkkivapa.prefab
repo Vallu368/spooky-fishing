@@ -420,22 +420,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76caa820a024e05469cf756d17e46193, type: 2}
   checkpoint2Fishes:
   - {fileID: 11400000, guid: c370e96296ced664faba851753b59637, type: 2}
-  checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
+  - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
+  checkpoint1: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
   checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
   masterFish: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
-  HowManyFishesToEnd: 15
+  HowManyFishesToEnd: 3
   i: 0
   fishing: {fileID: 1899736253423498002}
   index: 0
   inventory: {fileID: 0}
-  totalFishForCheckpoint1: 4
-  totalFishForCheckpoint2: 10
+  totalFishForCheckpoint1: 1
+  totalFishForCheckpoint2: 2
   animator: {fileID: 1899736254477189218}
   repeat: 0
   spawnedFishIndex: 0
   count1: 0
   count2: 0
   count3: 0
+  endFish: 0
 --- !u!95 &1899736254477189218
 Animator:
   serializedVersion: 3

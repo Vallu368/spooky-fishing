@@ -33,7 +33,6 @@ public class FishScript : MonoBehaviour
 
     private void Update()
     {
-            
         
         count1 = fishes.Count;
         count2 = checkpoint1Fishes.Count;
@@ -151,10 +150,7 @@ public class FishScript : MonoBehaviour
                 checkpoint2Fishes.Remove(checkpoint2Fishes[spawnedFishIndex]);
                 Debug.Log("removed " + checkpoint2Fishes[spawnedFishIndex].itemName);
             }
-            if (endFish)
-            {
-                SceneManager.LoadScene("LoppuCutscene");
-            }
+            
         }
 
     }
@@ -171,5 +167,9 @@ public class FishScript : MonoBehaviour
         inventory.RefreshUI();
         inventory.Add(checkpoint2);
 
+    }
+    public void CaughtEndingFish()
+    {
+        animator.Play("Fish up");
     }
 }
