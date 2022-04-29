@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: c316f3947fd5a3a4a873c30423acdfc5
+  - enabled: 1
+    path: Assets/Scenes/LoppuCutscene.unity
+    guid: 281b449bfdcaddb49b9ee5f4405fd8a5
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: b2e41f40b646c5941af3844bc73c1dca
   m_configObjects: {}
