@@ -119,7 +119,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookLeft) //jos playeri katsoi vasemalle ja k��ntyi pois
+        if (playerNoticed && !cam.lookLeft && cam.time == 2) //jos playeri katsoi vasemalle ja k��ntyi pois 1sek
         {
             StartCoroutine(PlayerDies());
         }
@@ -136,7 +136,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookRight) //jos playeri katsoi vasemalle ja k��ntyi pois
+        if (playerNoticed && !cam.lookRight && cam.time == 2) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
             StartCoroutine(PlayerDies());
         }
@@ -153,7 +153,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookForward) //jos playeri katsoi vasemalle ja k��ntyi pois
+        if (playerNoticed && !cam.lookForward && cam.time == 2) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
             StartCoroutine(PlayerDies());
         }
@@ -170,7 +170,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookBackLeft) //jos playeri katsoi vasemalle ja k��ntyi pois
+        if (playerNoticed && !cam.lookBackLeft && cam.time == 2) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
             StartCoroutine(PlayerDies());
         }
@@ -187,7 +187,7 @@ public class MonsteriKakkonen : MonoBehaviour
         {
             playerNoticed = true;
         }
-        if (playerNoticed && !cam.lookBackRight) //jos playeri katsoi vasemalle ja k��ntyi pois
+        if (playerNoticed && !cam.lookBackRight && cam.time == 2) //jos playeri katsoi vasemalle ja k��ntyi pois
         {
             StartCoroutine(PlayerDies());
             Debug.Log("you died oof ouch");
