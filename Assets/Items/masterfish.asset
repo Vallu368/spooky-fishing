@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Sunset Fish
   itemIcon: {fileID: 21300000, guid: 7a521b0fc7045b84cb5316e7da4c65c4, type: 3}
-  description: jeeeeesh
+  description: '"This is it, it''s the legendary little Star fish! Now I have to
+    get out of here and fast.'
   itemType: 0
   prefab: {fileID: 6361527075008851931, guid: d17e9a668bb699f40853e4f17a432981, type: 3}
+  canSpawnMultipleTimes: 0
