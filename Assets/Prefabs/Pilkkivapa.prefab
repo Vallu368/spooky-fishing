@@ -425,6 +425,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c370e96296ced664faba851753b59637, type: 2}
   - {fileID: 11400000, guid: d98450efb8bf1584b85e522550dbb778, type: 2}
   - {fileID: 11400000, guid: c370e96296ced664faba851753b59637, type: 2}
+  endingFish: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}
   checkpoint1: {fileID: 11400000, guid: ba0b445f1c69c914091b470c88b3634a, type: 2}
   checkpoint2: {fileID: 11400000, guid: 9c2abb8a29e9a234d8ffd5e93741ecb2, type: 2}
   masterFish: {fileID: 11400000, guid: 559082b5a7d1a7a4eb39099677315a61, type: 2}

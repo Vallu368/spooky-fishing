@@ -11,6 +11,7 @@ public class FishScript : MonoBehaviour
     public List<FishableItem> fishes;
     public List<FishableItem> checkpoint1Fishes;
     public List<FishableItem> checkpoint2Fishes;
+    public FishableItem endingFish;
     public FishableItem checkpoint1;
     public FishableItem checkpoint2;
     public FishableItem masterFish;
@@ -168,6 +169,7 @@ public class FishScript : MonoBehaviour
     }
     public void CaughtEndingFish()
     {
+        inventory.Add(endingFish);
         AudioSource.PlayClipAtPoint(endingFishSplash, Camera.main.transform.position);
         animator.Play("Fish up");
     }
