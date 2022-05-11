@@ -86,9 +86,6 @@ public class FishScript : MonoBehaviour
         {
             Debug.Log("oh no spooky");
         }
-       
-        
-        
 
     }
     public void DestroyFish()

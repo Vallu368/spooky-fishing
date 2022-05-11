@@ -131,7 +131,7 @@ public class Fishing : MonoBehaviour
             if (ending)
             {
                 wait++;
-                if (wait > 5f)
+                if (wait > 15f)
                 {
                     SceneManager.LoadScene("LoppuCutscene");
                 }
